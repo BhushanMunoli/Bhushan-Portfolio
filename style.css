@@ -1,0 +1,671 @@
+/* ==========================================================================
+   1. GLOBAL VARIABLES & RESET
+   ========================================================================== */
+:root {
+    --aggiemaroon: #500000;         
+    --slate: #2b3a4a;        /* Casual secondary blue-gray */
+    --logic-high: #ff9f1c;   /* Amber LED / Logic High accent */
+    --bg-white: #fdfdfd;     Clean off-white
+    --font-code: 'IBM Plex Mono', monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #ffffff; 
+    color: var(--slate);      
+    line-height: 1.6; 
+    
+    background-image: 
+        /* Layer 1: Vertical Traces (Converted to Muted Gray) */
+        url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23888888' stroke-opacity='0.5' stroke-width='2.5'%3E%3Cpath d='M100 0 v40 L120 60 v60 L100 140 v60'/%3E%3Ccircle cx='120' cy='60' r='2' fill='%23888888' fill-opacity='0.25'/%3E%3C/g%3E%3C/svg%3E"),
+        
+        /* Layer 2: VLSI Components (Converted to Deep Gray) */
+        url("data:image/svg+xml,%3Csvg width='400' height='400' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cg stroke='%23555555' stroke-opacity='0.7' fill='none' stroke-width='1'%3E%3Cpath d='M30 50 v20 M25 60 h10 M35 55 v10'/%3E%3Cpath d='M150 250 v20 M145 260 h10 M155 255 v10'/%3E%3Cpath d='M320 80 v20 M315 90 h10 M325 85 v10'/%3E%3Cpath d='M60 350 v20 M55 360 h10 M65 355 v10'/%3E%3Cpath d='M250 150 v20 M245 160 h10 M255 155 v10'/%3E%3Cpath d='M100 120 h20 M100 125 h20'/%3E%3Cpath d='M280 320 h20 M280 325 h20'/%3E%3Cpath d='M350 200 h20 M350 205 h20'/%3E%3Crect x='180' y='40' width='30' height='20' rx='2'/%3E%3Cpath d='M185 40 v-4 M195 40 v-4 M205 40 v-4 M185 60 v4 M195 60 v4 M205 60 v4'/%3E%3Crect x='40' y='220' width='30' height='20' rx='2'/%3E%3Cpath d='M45 220 v-4 M55 220 v-4 M65 220 v-4 M45 240 v4 M55 240 v4 M65 240 v4'/%3E%3C/g%3E%3C/svg%3E"),
+
+        /* Layer 3: Professional Gradient Base */
+        linear-gradient(to bottom right, #f0f2f5, #d9e2ec);
+
+background-color: #fdfdfd;
+background-attachment: scroll;
+}
+
+section {
+    padding: 60px 15% !important;        
+    width: 100%;                        
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: none;               
+    display: block;       
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 40px 5%; /* Less side padding on small screens */
+    }
+
+    h1 {
+        font-size: 2.5rem; /* Smaller text so it doesn't overflow */
+    }
+
+    .hero-container {
+        flex-direction: column; /* Stack the text and image vertically */
+        text-align: center;
+    }
+}
+
+/* ==========================================================================
+   3. TYPOGRAPHY (OPTION 1: MODERN ACCENTED)
+   ========================================================================== */
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: -1.5px;
+    color: var(--aggiemaroon);
+}
+
+h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--aggiemaroon);
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0px;
+    cursor: default;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    width: 0;             
+    height: 4px;
+    background: #fe8c01;
+    bottom: 0;
+    left: 0;
+    border-radius: 2px;
+    transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1); 
+}
+
+h2:hover::after {
+    width: 100%;      
+}
+
+section:hover h2::after {
+    width: 100%;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--aggiemaroon);
+}
+
+h4 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--aggiemaroon);
+    letter-spacing: 1px;
+}
+
+/* ==========================================================================
+   3. LAYOUT & SECTIONS
+   ========================================================================== */
+section {
+    padding: 60px 15%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    /* box-shadow: 0 0 40px rgba(0, 0, 0, 0.05); */
+}
+
+.hero {
+    min-height: 80vh; 
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px !important; 
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    width: 100%;
+    text-align: left;
+    margin-top: 40px; 
+}
+
+.hero-left { flex: 1.5; }
+
+.hero-image-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers icons relative to the image width */
+    gap: 15px; /* Space between image and icons */
+}
+
+.hero-contact-socials {
+    display: flex;
+    gap: 20px;
+    /* background: rgba(255, 255, 255, 0.5); Very light aggiemaroon tint */
+    padding: 10px 80px;
+    border-radius: 50px;
+    /* border: 1px transparent rgba(112, 110, 110, 0.212); */
+    
+}
+
+.hero-contact-socials a {
+    color: var(--aggiemaroon);
+    font-size: 1.6rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.hero-contact-socials a:hover {
+    color: var(--logic-high);
+    transform: translateY(-3px);
+}
+
+.hero h1 { 
+    font-size: 3.5rem; 
+    color: var(--aggiemaroon); 
+    margin-bottom: 10px; 
+    line-height: 1.1;
+}
+
+.hero .name { color: var(--aggiemaroon); }
+
+#typing-text {
+    font-family: var(--font-code);
+    color: var(--aggiemaroon);
+    background: #002b5b11;
+    padding: 2px 10px;
+    border-radius: 4px;
+}
+
+#typing-text-about {
+    font-family: var(--font-code);
+    color: var(--aggiemaroon);
+    background: #002b5b11;
+    padding: 0px 10px;
+    border-radius: 4px;
+}
+
+.hero-description {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: var(--slate);
+    max-width: 90%;
+    
+    background: rgba(255, 255, 255, 0.85); 
+    padding: 15px 25px;               
+    border-radius: 8px;                   
+    border-left: 4px ; 
+    backdrop-filter: blur(5px);           
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); 
+    text-align: justify;
+}
+
+.about {
+    padding-top: 20px;
+    padding-bottom: 60px;
+}
+
+/* ==========================================================================
+   4. NAVIGATION (aggiemaroon BG, WHITE TEXT, ORANGE HOVER)
+   ========================================================================== */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 15%;
+    background: var(--aggiemaroon); 
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+nav .logo {
+    font-family: var(--font-code);
+    color: #ffffff; 
+    font-weight: 700;
+}
+
+nav ul { 
+    display: flex; 
+    list-style: none; 
+}
+
+nav ul li { 
+    margin-left: 35px; 
+}
+
+nav ul li a { 
+    text-decoration: none; 
+    color: #ffffff; 
+    font-weight: 500; 
+    transition: 0.3s; 
+}
+
+nav ul li a:hover { 
+    color: var(--logic-high) !important; 
+    transition: 1s;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--logic-high);
+    transition: width 1s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--logic-high);
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--aggiemaroon);
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* ==========================================================================
+   5. COMPONENTS (CARDS, IMAGES, BUTTONS)
+   ========================================================================== */
+.profile-img-large {
+    width: 30px;
+    height: 30px;
+    object-fit: fill;
+    transition: transform 0.3s ease;
+}
+
+.profile-img-large:hover {
+    transform: scale(0.5);
+}
+
+img {
+    max-width: 100%;
+    height: auto; /* Maintains aspect ratio */
+}
+
+.profile-img {
+    width: 300px;        
+    height: 300px;
+    object-fit: cover;      
+    border: 5px solid var(--aggiemaroon); 
+    border-radius: 12px;    /* Subtle rounding for the "chip" look */
+    box-shadow: 10px 10px 0px var(--aggiemaroon); /* Amber accent "shadow" */
+    transition: transform 0.3s ease;
+}
+
+.work-container {
+    display: outside;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.work-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 43, 91, 0.1);
+    border-left: 5px solid var(--aggiemaroon);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    margin-top: 10px;
+}
+
+.work-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 43, 91, 0.08);
+    border-color: var(--logic-high);
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.project-card {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 30px;
+    transition: 0.4s ease;
+    border-left: 5px solid var(--aggiemaroon);
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 43, 91, 0.1);
+    border-left-color: var(--logic-high);
+}
+
+.btn {
+    margin-top: 30px;
+    padding: 14px 32px;
+    background: var(--aggiemaroon);
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+    transition: 0.3s;
+    border: 2px solid var(--aggiemaroon);
+}
+
+.btn:hover {
+    background: white;
+    color: var(--aggiemaroon);
+    box-shadow: 0 8px 15px rgba(0, 43, 91, 0.2);
+}
+
+.btnedu {
+    margin-top: 10px;
+    padding: 10px 25px;
+    background: var(--aggiemaroon);
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: inline-block;
+    transition: 0.3s;
+    border: 2px solid var(--aggiemaroon);
+}
+
+.btnedu:hover {
+    background: white;
+    color: var(--aggiemaroon);
+    box-shadow: 0 8px 15px rgba(0, 43, 91, 0.2);
+}
+
+.tech-tag {
+    font-family: var(--font-code);
+    font-size: 0.75rem;
+    color: var(--aggiemaroon);
+    background: #eef2f7;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin: 5px 5px 0 0;
+    display: inline-block;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.skill-category {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 30px;
+    transition: 0.4s ease; 
+    border-left: 5px solid var(--aggiemaroon);
+}
+
+.skill-category:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 15px 30px rgba(0, 43, 91, 0.1); 
+    border-left-color: var(--logic-high); 
+}
+
+.skill-category:hover h4 {
+    color: var(--aggiemaroon);
+    transition: color 0.3s ease;
+}
+
+.skill-category ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.skill-category ul ul {
+    margin-left: 25px;    
+    margin-top: 5px;
+    margin-bottom: 10px;
+    list-style-type: circle; 
+}
+
+.skill-category ul ul ul {
+    margin-left: 20px;
+    list-style-type: square;
+}
+
+.skill-category li {
+    margin-bottom: 5px;
+}
+
+/* ==========================================================================
+   6. CONTACT & FOOTER
+   ========================================================================== */
+.contact {
+    background: var(--aggiemaroon); 
+    color: white;
+    padding: 60px 15% !important; 
+    text-align: center;
+}
+
+.contact h2 { 
+    color: #ffffff;
+    display: inline-block;
+    padding: 5px 20px;
+    margin-bottom: 20px;
+    text-transform: uppercase; 
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.contact-item {
+    color: white;
+    text-decoration: none;
+    font-family: var(--font-code);
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.contact-item i { color: #ffffff; margin-right: 8px; }
+.contact-item:hover { color: var(--logic-high); }
+
+footer {
+    background: var(--bg-white);
+    color: rgb(0, 0, 0);
+    padding: 25px;
+    text-align: center;
+    font-size: 0.8rem;
+    font-family: var(--font-code);
+}
+
+
+
+/* ==========================================================================
+   7. Certificate
+   ========================================================================== */
+#cert-viewer {
+    padding: 40px 15%  !important; 
+    width: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    display: block;
+    overflow: hidden;
+}
+
+
+.slider-container.media-slider-look {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    margin: 20px auto 0 auto; 
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.356);
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.slider-container.media-slider-look {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.cert-slide {
+    display: block; 
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), 
+                transform 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+                visibility 0.8s;
+    transform: translateX(20px);
+    pointer-events: none;
+}
+
+.cert-slide.active {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    pointer-events: auto;
+}
+
+.slider-arrow {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cert-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 17 / 12;
+    object-fit: contain;
+    background-color: #f8f9fa;
+}
+
+.cert-details {
+    padding: 15px;
+    background: #fff;
+    border-top: 1px solid #fff;
+    text-align: center;
+}
+
+.slider-arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    background-color: rgba(0, 43, 91, 0.6);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s all ease;
+    z-index: 10;
+}
+
+.slider-arrow:hover {
+    background-color: var(--logic-high);
+    scale: 1.1;
+}
+
+.slider-arrow.prev { left: 20px; }
+.slider-arrow.next { right: 20px; }
+
+@keyframes smoothSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* ==========================================================================
+   7. Course
+   ========================================================================== */
+.course-list {
+    margin-top: 20px;
+    font-family: var(--font-main);
+}
+
+/* Primary List (Semesters) */
+.course-list > ul {
+    list-style-type: none; /* Remove default bullets for semesters */
+    padding-left: 0;
+}
+
+.course-list > ul > li {
+    margin-bottom: 20px;
+    color: var(--navy);
+    font-weight: 600;
+}
+
+/* Nested List (Specific Courses) */
+.course-list ul ul {
+    margin-top: 8px;
+    padding-left: 30px; /* This creates the indentation */
+    list-style-type: square; /* Professional square bullets */
+}
+
+.course-list ul ul li {
+    margin-bottom: 5px;
+    color: var(--slate);
+    font-weight: 400;
+    font-family: var(--font-main);
+    font-size: 0.95rem;
+}
+
