@@ -109,6 +109,12 @@ h3 {
     color: var(--aggiemaroon);
 }
 
+h3 a:visited {
+    text-decoration:none;
+    color: var(--aggiemaroon); /* Prevents the 'visited' purple color */
+    
+}
+
 h4 {
     font-size: 1rem;
     font-weight: 500;
@@ -406,6 +412,8 @@ img {
     display: inline-block;
     transition: 0.3s;
     border: 2px solid var(--aggiemaroon);
+    width: fit-content;         /* Sets a fixed width */
+    text-align: center;
 }
 
 .btnedu:hover {
@@ -547,12 +555,6 @@ footer {
     flex-direction: column;
 }
 
-.slider-container.media-slider-look {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
-
 .cert-slide {
     display: block; 
     width: 100%;
@@ -574,10 +576,6 @@ footer {
     visibility: visible;
     transform: translateX(0);
     pointer-events: auto;
-}
-
-.slider-arrow {
-    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .cert-image {
