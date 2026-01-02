@@ -24,27 +24,30 @@ var typed_about = new Typed('#typing-text-about', {
 });
 
 // --- PDF Slider Logic ---
-let currentSlide = 0;
+let current = 0;
 
-function moveSlide(n) {
-    const slides = document.querySelectorAll(".cert-slide");
-    if (slides.length === 0) return;
+// Attached to window so the HTML 'onclick' can find it
+window.moveSlide = (step) => {
+    const slides = document.querySelectorAll('.cert-slide');
     
-    slides[currentSlide].classList.remove("active");
-    slides[currentSlide].style.opacity = 0;
+    // 1. Hide the current slide
+    slides[current].classList.remove('active');
 
-    currentSlide = (currentSlide + n + slides.length) % slides.length;
+    // 2. Calculate the next index (circular logic)
+    current = (current + step + slides.length) % slides.length;
 
-    slides[currentSlide].classList.add("active");
-    setTimeout(() => {
-        slides[currentSlide].style.opacity = 1;
-    }, 10);
-}
+    // 3. Show the new slide
+    slides[current].classList.add('active');
+};
 
-document.addEventListener("DOMContentLoaded", () => {
-    const slides = document.querySelectorAll(".cert-slide");
-    if (slides.length > 0) {
-        slides[0].classList.add("active");
-        slides[0].style.opacity = 1;
+function toggleDetails(button) {
+    const card = button.closest('.project-card');
+    card.classList.toggle('expanded');
+    
+    // Change button text based on state
+    if (card.classList.contains('expanded')) {
+        button.innerText = 'View Less';
+    } else {
+        button.innerText = 'View More';
     }
-});
+}
