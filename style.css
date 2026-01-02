@@ -1,669 +1,388 @@
-/* ==========================================================================
-   1. GLOBAL VARIABLES & RESET
-   ========================================================================== */
-:root {
-    --aggiemaroon: #500000;         
-    --slate: #2b3a4a;        /* Casual secondary blue-gray */
-    --logic-high: #ff9f1c;   /* Amber LED / Logic High accent */
-    --bg-white: #fdfdfd;     Clean off-white
-    --font-code: 'IBM Plex Mono', monospace;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BHUSHAN | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://kit.fontawesome.com/script.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">Profile</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#edu">Education</a></li>
+            <li><a href="#workex">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#cert-viewer">Certifications</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-}
+    <section id="home" class="hero">
+    <div class="hero-container">
+        <div class="hero-left">
+            <h1>Hey! I'm <span class="name">Bhushan</span></h1>
+            <h3><span id="typing-text"></span></h3>
+            <p class="hero-description">
+                Currently pursuing my degree in <b>Electrical and Computer Engineering</b> at <b>Texas A&M University</b>, I am deeply interested in the intersection of <b>SoC Design Verification</b>, <b>ASIC Design</b> and <b>Design for Test</b>. Pursuing masters at Texas A&M University has been an exciting journey and full of learning. Applying these concepts in the projects have made me highly relevant in the practical world. I am eager to contribute my skills and experience to the cutting edge projects in the field of ASIC Design and Verification. I believe my technical knowledge and leadership abilities will enable me to make a significant impact in the industry"
+            </p>
+            <a href="Bhushan Kiran Munoli TAMU Resume.pdf" class="btn" download>VIEW RESUME</a>
+        </div>
 
-html {
-    scroll-behavior: smooth;
-}
+        <div class="hero-right">
+            <img src="bhushan_pic.png" alt="Bhushan Kiran Munoli" class="profile-img">
+            <div class="hero-contact-socials">
+            <a href="mailto:munolibhushan@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/bhushan-kiran-munoli/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/yourusername" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="tel:+19793446100" title="Phone"><i class="fas fa-phone"></i></a>
+        </div>
+        </div>
+    </div>
+</section>
+ 
 
-body {
-    background-color: #ffffff; 
-    color: var(--slate);      
-    line-height: 1.6; 
-    
-    background-image: 
-        /* Layer 1: Vertical Traces (Converted to Muted Gray) */
-        url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23888888' stroke-opacity='0.5' stroke-width='2.5'%3E%3Cpath d='M100 0 v40 L120 60 v60 L100 140 v60'/%3E%3Ccircle cx='120' cy='60' r='2' fill='%23888888' fill-opacity='0.25'/%3E%3C/g%3E%3C/svg%3E"),
+<section id="edu" class="edu">
+    <h2>Education</h2>
+    <div class="work-container">
+        <div class="work-card">
+            <h3><a href="#projects" class="project-link"><img src="tamu.png" alt="work" class="profile-img-large"></a></i> <a href="#projects" class="project-link">Texas A&M University</a></h3>
+            <div class="course-list">
+                <h4>MS in Electrical and Computer Engneering</h4>
+                <h4>August 2025 - May 2027</h4>
+                <ul>
+                     <li><strong>Fall 2025</strong>
+                    <ul>
+                        <li>CSCE 614: Computer Architecture</li>
+                        <li>CSCE 616: Introduction to Hardware Design Verification</li>
+                        <li>ECEN 714: Digital Integrated Circuit Design</li>
+                    </ul>
+                    </li>
+                    <li><strong>Spring 2026</strong>
+                    <ul>  
+                        <li>CSCE 714: Advanced Hardware Design Functional Verification</li>
+                        <li>ECEN 723: Introduction to Formal Verification</li>
+                        <li>ECEN 749: Microprocessor Systems Design</li>
+                    </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="work-card">
+            <h3><a href="#ugprojects" class="project-link"><img src="pes.png" alt="work" class="profile-img-large"></a></i> <a href="#ugprojects" class="project-link">PES University</a></h3>
+            <div class="course-list">
+                <h4>B.Tech in Electronics and Computer Engineering </h4>
+                <h4>August 2019 - May 2023</h4>
+                <ul>
+                     <li><strong>Relevent Courses</strong>
+                    <ul>
+                        <li>Computer Organization and Digital Design</li>
+                        <li>Digital VLSI Design</li>
+                        <li>Ditial Design using Verilog: ASIC and FPGA Cadence Tool</li>
+                        <li>Verification of Digital Systems</li>
+                        <li>Analog Circuit Design</li>
+                        <li>Control Systems</li>
+                        <li>Machine Learning</li>
+                        <li>Artificial Neural Networks</li>
+                    </ul>
+                    </li>
+                </ul>
+                <a href="btechdc.pdf" class="btnedu" download>View Degree Certificate</a>
+                <a href="btecht.pdf" class="btnedu" download>View Transcript</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="workex" class="workex">
+    <h2>Work Experience</h2>
+    <div class="work-container">
+        <div class="work-card">
+            <h3><img src="work.png" alt="work" class="profile-img-large"></i> Maven Silicon</h3>
+            <h4></h4>
+            <h4></h4>
+            <p>Performed Netlist to GDSII design flow of RISC V for a 32nm design with 6.34k standard cell count, and 9 metal layers using various tools (of synopsys), constraint files (from synopsys), along with analysis of tradeoffs between area, power and time. Starting with synthesis, followed by DFT (Design for testability), equivalence check, then Physical design which includes floor planning, placement, clock tree synthesis(CTS), Global and Detailed Routing, post optimization and finally sign-off.
+            Achieved standard cell and core area reduction by 11.8% and total power reduction by 70% with 5ns clock, avoiding congestion and latency issues and slack being met for setup and hold analysis.</p>
+        </div>
+
+        <div class="work-card">
+            <h3><img src="work.png" alt="work" class="profile-img-large"></i> Deloitte India</h3>
+            <h4>CPI Developer</h4>
+            <h4>Jul 2023 - Jul 2025</h4>
+            <p>
+
+            </p>
+            <a href="del.PDF" class="btnedu" download>Experience Letter</a>
+        </div>
+
+        <div class="work-card">
+            <h3><img src="work.png" alt="work" class="profile-img-large"></i> Zebra Technologies</h3>
+            <h4>Network Engineer (Intern)</h4>
+            <h4>Jan 2023 - July 2023</h4>
+            <p>
+
+            </p>
+            <a href="zeb.pdf" class="btnedu" download>Internship Completion Certificate</a>
+        </div>
+    </div>
+</section>
+
+
+<section id="projects" class="projects">
+    <h2>Computer Architecture Projects, Texas A&M University</h2>
+    <div class="project-container">
+
+        <div class="project-card">
+            <h3>Implementation of Cache Replacement and Insertion Policies Across L3 Cache Sizes</h3>
+            <h4>Nov 2025 - Dec 2025 <a href="#" class="project-link"><i class="fab fa-github"></i></a></h4>
+            <p>Implemented and analyzed SRRIP and NRU replacement policies using the ZSim simulator for multi-core cache performance optimization.</p>
+        </div>
         
-        /* Layer 2: VLSI Components (Converted to Deep Gray) */
-        url("data:image/svg+xml,%3Csvg width='400' height='400' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cg stroke='%23555555' stroke-opacity='0.7' fill='none' stroke-width='1'%3E%3Cpath d='M30 50 v20 M25 60 h10 M35 55 v10'/%3E%3Cpath d='M150 250 v20 M145 260 h10 M155 255 v10'/%3E%3Cpath d='M320 80 v20 M315 90 h10 M325 85 v10'/%3E%3Cpath d='M60 350 v20 M55 360 h10 M65 355 v10'/%3E%3Cpath d='M250 150 v20 M245 160 h10 M255 155 v10'/%3E%3Cpath d='M100 120 h20 M100 125 h20'/%3E%3Cpath d='M280 320 h20 M280 325 h20'/%3E%3Cpath d='M350 200 h20 M350 205 h20'/%3E%3Crect x='180' y='40' width='30' height='20' rx='2'/%3E%3Cpath d='M185 40 v-4 M195 40 v-4 M205 40 v-4 M185 60 v4 M195 60 v4 M205 60 v4'/%3E%3Crect x='40' y='220' width='30' height='20' rx='2'/%3E%3Cpath d='M45 220 v-4 M55 220 v-4 M65 220 v-4 M45 240 v4 M55 240 v4 M65 240 v4'/%3E%3C/g%3E%3C/svg%3E"),
+        <div class="project-card">
+            <h3>Branch Pradictor Implementation</h3>
+            <h4>Sept 2025 - Oct 2025 <a href="#" class="project-link"><i class="fab fa-github"></i></a></h4>
+            <p>Implemented and analyzed SRRIP and NRU replacement policies using the ZSim simulator for multi-core cache performance optimization.</p>
+        </div>
+    </div>
+</section>
 
-        /* Layer 3: Professional Gradient Base */
-        linear-gradient(to bottom right, #f0f2f5, #d9e2ec);
+<section id="hwprojects" class="projects">
+    <h2>Hardware Design Verification Projects, Texas A&M University</h2>
+    <div class="project-container">
 
-background-color: #fdfdfd;
-background-attachment: scroll;
-}
+        <div class="project-card">
+            <h3>Functional Verification of Hyper Transport Advanced X-Bar</h3>
+            <h4>Aug 2025 - Dec 2025 <a href="https://github.com/BhushanMunoli/Functional-Verification-of-Hyper-Transport-Advanced-X-Bar" class="project-link"><i class="fab fa-github"></i></a></h4>
+            <p>Implemented and analyzed SRRIP and NRU replacement policies using the ZSim simulator for multi-core cache performance optimization.</p>
+        </div>
 
-section {
-    padding: 60px 15% !important;        
-    width: 100%;                        
-    background: rgba(255, 255, 255, 0.4);
-    backdrop-filter: none;               
-    display: block;       
-}
+        <div class="project-card">
+            <h3>RISC-V Implementation</h3>
+            <h4>Mar 2025 - Oct 2025 <a href="#" class="project-link"><i class="fab fa-github"></i></a></h4>
+            <p>Implemented and analyzed SRRIP and NRU replacement policies using the ZSim simulator for multi-core cache performance optimization.</p>
+        </div>
 
-@media (max-width: 768px) {
-    section {
-        padding: 40px 5%; /* Less side padding on small screens */
-    }
+        <div class="project-card">
+            <h3>Router 1x3 Implementation</h3>
+            <h4>Mar 2025 - Jul 2025 <a href="#" class="project-link"><i class="fab fa-github"></i></a></h4>
+            <p>Implemented and analyzed SRRIP and NRU replacement policies using the ZSim simulator for multi-core cache performance optimization.</p>
+        </div>
 
-    h1 {
-        font-size: 2.5rem; /* Smaller text so it doesn't overflow */
-    }
+</section>
+        
+<section id="pdprojects" class="projects">
+    <h2>ASIC Digital Design Projects, Texas A&M University</h2>
+    <div class="project-container">
+        <div class="project-card">
+            <h3>Implementation of Random Double Bit and Burst ECC for HBM3</h3>
+            <h4>Aug 2025 - Inprogress <a href="#" class="project-link"><i class="fab fa-github"></i></a></h4>
+            <p>Developed a UVM-based testbench for the HTAX design. Implemented sequences, drivers, and monitors to achieve 100% functional coverage.</p>
+        </div>
 
-    .hero-container {
-        flex-direction: column; /* Stack the text and image vertically */
-        text-align: center;
-    }
-}
+        <div class="project-card">
+            <h3>Design of Pipelined Adder with Buffered H-clock Tree</h3>
+            <h4>Aug 2025 - Dec 2025 <a href="#" class="project-link"><i class="fab fa-github"></i></a></h4>
+            <p>Implemented and analyzed SRRIP and NRU replacement policies using the ZSim simulator for multi-core cache performance optimization.</p>
+        </div>
+        
+        <div class="project-card">
+            <h3>Logic Synthesis & STA of Cruise Control System</h3>
+            <h4>Oct 2025 - Nov 2025 <a href="#" class="project-link"><i class="fab fa-github"></i></a></h4>
+            <p>Implemented and analyzed SRRIP and NRU replacement policies using the ZSim simulator for multi-core cache performance optimization.</p>
+        </div>
 
-/* ==========================================================================
-   3. TYPOGRAPHY (OPTION 1: MODERN ACCENTED)
-   ========================================================================== */
+        <div class="project-card">
+            <h3>RISC-V Implementation</h3>
+            <h4>Mar 2025 - Oct 2025 <a href="#" class="project-link"><i class="fab fa-github"></i></a></h4>
+            <p>Implemented and analyzed SRRIP and NRU replacement policies using the ZSim simulator for multi-core cache performance optimization.</p>
+        </div>
 
-h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    letter-spacing: -1.5px;
-    color: var(--aggiemaroon);
-}
+        <div class="project-card">
+            <h3>Router 1x3 Implementation</h3>
+            <h4>Mar 2025 - Jul 2025 <a href="#" class="project-link"><i class="fab fa-github"></i></a></h4>
+            <p>Implemented and analyzed SRRIP and NRU replacement policies using the ZSim simulator for multi-core cache performance optimization.</p>
+        </div>
 
-h2 {
-    font-size: 2.2rem;
-    font-weight: 600;
-    color: var(--aggiemaroon);
-    position: relative;
-    display: inline-block;
-    padding-bottom: 0px;
-    cursor: default;
-}
+        
 
-h2::after {
-    content: '';
-    position: absolute;
-    width: 0;             
-    height: 4px;
-    background: #fe8c01;
-    bottom: 0;
-    left: 0;
-    border-radius: 2px;
-    transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1); 
-}
+    </div>
+</section>
 
-h2:hover::after {
-    width: 100%;      
-}
+<section id="ugprojects" class="projects">
+    <h2>Undergraduate Projects at PES University, India</h2>
+    <div class="project-container">
+        <div class="project-card">
+            <h3>Implementation of IoT-Based Healthcare Kit</h3>
+            <h4>Jan 2022 - May 2023 <a href="https://github.com/BhushanMunoli/IoT-Based-Healthcare-Kit" class="project-link"><i class="fab fa-github"></i></a></h4>
+            <p>Implemented and analyzed SRRIP and NRU replacement policies using the ZSim simulator for multi-core cache performance optimization.</p>
+            <a href="finalprojpes.pdf" class="btnedu" download>View Research Paper</a>
+        </div>
+        
+        <div class="project-card">
+            <h3>Human Voice Analysis to Determine Age and Gender</h3>
+            <h4>Aug 2023 - Dec 2023 <a href="https://github.com/BhushanMunoli/Human-Voice-Analysis/tree/main" class="project-link"><i class="fab fa-github"></i></a></h4>
+            <p>Implemented and analyzed SRRIP and NRU replacement policies using the ZSim simulator for multi-core cache performance optimization.</p>
+            <a href="audioproj.pdf" class="btnedu" download>View Research Paper</a>
+        </div>
 
-section:hover h2::after {
-    width: 100%;
-}
+    </div>
+</section>
 
-h3 {
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: var(--aggiemaroon);
-}
 
-h3 a:visited {
-    text-decoration:none;
-    color: var(--aggiemaroon); /* Prevents the 'visited' purple color */
+<section id="cert-viewer">
+    <div class="container">
+        <h2 class="section-title">Professional Cadence Certifications</h2>
+        
+        <div class="slider-container media-slider-look">
+            <div class="cert-slide active">
+                <div class="slide-content">
+                    <div class="cert-details">
+                        <h3>SystemVerilog for Design and Verification v25.03</h3>
+                    </div>
+                    <img src="SVDV.png" alt="SystemVerilog for Design and Verification" class="cert-image">
+                </div>
+            </div>
+
+            <div class="cert-slide">
+                <div class="slide-content">
+                    <div class="cert-details">
+                        <h3>SystemVerilog Assertions v5.2</h3>
+                    </div>
+                    <img src="SVA.png" alt="SystemVerilog Assertions" class="cert-image">
+                </div>
+            </div>
+
+            <div class="cert-slide">
+                <div class="slide-content">
+                    <div class="cert-details">
+                        <h3>Jasper Formal Fundamentals v25.09</h3>
+                    </div>
+                    <img src="jaspformal.png" alt="Jasper Formal Fundamentals" class="cert-image">
+                </div>
+            </div>
+
+            <div class="cert-slide">
+                <div class="slide-content">
+                    <div class="cert-details">
+                        <h3>Basic Static Timing Analysis v3.0</h3>
+                    </div>
+                    <img src="bsta.png" alt="Basic Static Timing Analysis" class="cert-image">
+                </div>
+            </div>
+
+            <button class="slider-arrow prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="slider-arrow next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="skills" class="skills">
+    <div class="container">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h4><i class="fas fa-tools"></i> SoC Design Verification</h4>
+                <ul>
+                    <li>UVM</li>
+                    <li>System Verilog & Verilog</li>
+                    <li> Protocols</li>
+                    <ul>
+                        <li>Advanced Microcontroller Bus Architecture(AMBA)</li>
+                        <li>Hyper Transport Advanced X-Bar (HTAX)</li>
+                        <li>Universal Serial Bus (USB)</li>
+                        <li>Inter-Integrated Circuit (I2C)</li>
+                        <li>Universal Asynchronous Receiver/Transmitter (UART)</li>
+                    </ul>
+                    <li>GPU & CPU Architecture</li>
+                    <li>Softwares</li>
+                    <ul>    
+                        <li>Cadence vManager</li>
+                        <li>Xcelium</li>
+                        <li>SimVision</li>
+                        <li>IMC</li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h4><i class="fas fa-microchip"></i> ASIC Physical Design</h4>
+                <ul>
+                    <li>Floor-Planning</li>
+                    <li>Placement & Routing</li>
+                    <li>Static Timings Analysis</li>
+                    <li>Clock Tree Analysis</li>
+                    <li>Power Analysis</li>
+                    <li>TCL Scripting</li>
+                    <li>Perl</li>
+                    <li>Softwares</li>
+                    <ul>    
+                        <li>Cadence</li> 
+                        <ul>
+                            <li>Virtuoso</li>
+                            <li>Spectre</li>
+                        </ul>    
+                        <li>Synopsys </li>
+                        <ul>
+                        <li>Design Compiler</li>
+                        <li>Fusion Compiler</li>
+                        <li>IC Compiler</li>
+                        <li>Prime Time</li>
+                        </ul>
+                    </ul>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h4><i class="fas fa-laptop-code"></i> Programming</h4>
+                <ul>
+                    <li>C </li>
+                    <li>C++</li>
+                    <li>Verilog</li>
+                    <li>System Verilog</li>
+                    <li>Python</li>
+                    <li>Make file</li>
+                    <li>Linux Shell</li>
+                    <li>Git</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Currently in College Station, Texas, United States of America.</p>
     
-}
-
-h4 {
-    font-size: 1rem;
-    font-weight: 500;
-    color: var(--aggiemaroon);
-    letter-spacing: 1px;
-}
-
-/* ==========================================================================
-   3. LAYOUT & SECTIONS
-   ========================================================================== */
-section {
-    padding: 60px 15%;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.4);
-    /* box-shadow: 0 0 40px rgba(0, 0, 0, 0.05); */
-}
-
-.hero {
-    min-height: 80vh; 
-    display: flex;
-    align-items: center;
-    padding-bottom: 20px !important; 
-}
-
-.hero-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 50px;
-    width: 100%;
-    text-align: left;
-    margin-top: 40px; 
-}
-
-.hero-left { flex: 1.5; }
-
-.hero-image-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centers icons relative to the image width */
-    gap: 15px; /* Space between image and icons */
-}
-
-.hero-contact-socials {
-    display: flex;
-    gap: 20px;
-    /* background: rgba(255, 255, 255, 0.5); Very light aggiemaroon tint */
-    padding: 10px 80px;
-    border-radius: 50px;
-    /* border: 1px transparent rgba(112, 110, 110, 0.212); */
-    
-}
-
-.hero-contact-socials a {
-    color: var(--aggiemaroon);
-    font-size: 1.6rem;
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.hero-contact-socials a:hover {
-    color: var(--logic-high);
-    transform: translateY(-3px);
-}
-
-.hero h1 { 
-    font-size: 3.5rem; 
-    color: var(--aggiemaroon); 
-    margin-bottom: 10px; 
-    line-height: 1.1;
-}
-
-.hero .name { color: var(--aggiemaroon); }
-
-#typing-text {
-    font-family: var(--font-code);
-    color: var(--aggiemaroon);
-    background: #002b5b11;
-    padding: 2px 10px;
-    border-radius: 4px;
-}
-
-#typing-text-about {
-    font-family: var(--font-code);
-    color: var(--aggiemaroon);
-    background: #002b5b11;
-    padding: 0px 10px;
-    border-radius: 4px;
-}
-
-.hero-description {
-    margin-top: 20px;
-    font-size: 1.1rem;
-    color: var(--slate);
-    max-width: 90%;
-    
-    background: rgba(255, 255, 255, 0.85); 
-    padding: 15px 25px;               
-    border-radius: 8px;                   
-    border-left: 4px ; 
-    backdrop-filter: blur(5px);           
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); 
-    text-align: justify;
-}
-
-.about {
-    padding-top: 20px;
-    padding-bottom: 60px;
-}
-
-/* ==========================================================================
-   4. NAVIGATION (aggiemaroon BG, WHITE TEXT, ORANGE HOVER)
-   ========================================================================== */
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.8rem 15%;
-    background: var(--aggiemaroon); 
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-nav .logo {
-    font-family: var(--font-code);
-    color: #ffffff; 
-    font-weight: 700;
-}
-
-nav ul { 
-    display: flex; 
-    list-style: none; 
-}
-
-nav ul li { 
-    margin-left: 35px; 
-}
-
-nav ul li a { 
-    text-decoration: none; 
-    color: #ffffff; 
-    font-weight: 500; 
-    transition: 0.3s; 
-}
-
-nav ul li a:hover { 
-    color: var(--logic-high) !important; 
-    transition: 1s;
-}
-
-nav ul li a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 0px;
-    bottom: 0;
-    left: 0;
-    background-color: var(--logic-high);
-    transition: width 1s ease;
-}
-
-nav ul li a:hover::after {
-    width: 100%;
-}
-
-nav ul li a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: var(--logic-high);
-    transition: width 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: var(--aggiemaroon);
-}
-
-nav ul li a:hover::after {
-    width: 100%;
-}
-
-/* ==========================================================================
-   5. COMPONENTS (CARDS, IMAGES, BUTTONS)
-   ========================================================================== */
-.profile-img-large {
-    width: 30px;
-    height: 30px;
-    object-fit: fill;
-    transition: transform 0.3s ease;
-}
-
-.profile-img-large:hover {
-    transform: scale(0.5);
-}
-
-img {
-    max-width: 100%;
-    height: auto; /* Maintains aspect ratio */
-}
-
-.profile-img {
-    width: 300px;        
-    height: 300px;
-    object-fit: cover;      
-    border: 5px solid var(--aggiemaroon); 
-    border-radius: 12px;    /* Subtle rounding for the "chip" look */
-    box-shadow: 10px 10px 0px var(--aggiemaroon); /* Amber accent "shadow" */
-    transition: transform 0.3s ease;
-}
-
-.work-container {
-    display: outside;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-    margin-top: 20px;
-}
-
-.work-card {
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    border: 1px solid rgba(0, 43, 91, 0.1);
-    border-left: 5px solid var(--aggiemaroon);
-    transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-    margin-top: 10px;
-}
-
-.work-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 43, 91, 0.08);
-    border-color: var(--logic-high);
-}
-
-.project-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.project-card {
-    background: white;
-    border: 1px solid #e0e0e0;
-    border-radius: 12px;
-    padding: 30px;
-    transition: 0.4s ease;
-    border-left: 5px solid var(--aggiemaroon);
-}
-
-.project-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0, 43, 91, 0.1);
-    border-left-color: var(--logic-high);
-}
-
-.btn {
-    margin-top: 30px;
-    padding: 14px 32px;
-    background: var(--aggiemaroon);
-    color: white;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 700;
-    display: inline-block;
-    transition: 0.3s;
-    border: 2px solid var(--aggiemaroon);
-}
-
-.btn:hover {
-    background: white;
-    color: var(--aggiemaroon);
-    box-shadow: 0 8px 15px rgba(0, 43, 91, 0.2);
-}
-
-.btnedu {
-    margin-top: 10px;
-    padding: 10px 25px;
-    background: var(--aggiemaroon);
-    color: white;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 0.9rem;
-    display: inline-block;
-    transition: 0.3s;
-    border: 2px solid var(--aggiemaroon);
-    width: fit-content;         /* Sets a fixed width */
-    text-align: center;
-}
-
-.btnedu:hover {
-    background: white;
-    color: var(--aggiemaroon);
-    box-shadow: 0 8px 15px rgba(0, 43, 91, 0.2);
-}
-
-.tech-tag {
-    font-family: var(--font-code);
-    font-size: 0.75rem;
-    color: var(--aggiemaroon);
-    background: #eef2f7;
-    padding: 4px 10px;
-    border-radius: 4px;
-    margin: 5px 5px 0 0;
-    display: inline-block;
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.skill-category {
-    background: white;
-    border: 1px solid #e0e0e0;
-    border-radius: 12px;
-    padding: 30px;
-    transition: 0.4s ease; 
-    border-left: 5px solid var(--aggiemaroon);
-}
-
-.skill-category:hover {
-    transform: translateY(-8px); 
-    box-shadow: 0 15px 30px rgba(0, 43, 91, 0.1); 
-    border-left-color: var(--logic-high); 
-}
-
-.skill-category:hover h4 {
-    color: var(--aggiemaroon);
-    transition: color 0.3s ease;
-}
-
-.skill-category ul {
-    list-style-type: disc;
-    margin-left: 20px;
-}
-
-.skill-category ul ul {
-    margin-left: 25px;    
-    margin-top: 5px;
-    margin-bottom: 10px;
-    list-style-type: circle; 
-}
-
-.skill-category ul ul ul {
-    margin-left: 20px;
-    list-style-type: square;
-}
-
-.skill-category li {
-    margin-bottom: 5px;
-}
-
-/* ==========================================================================
-   6. CONTACT & FOOTER
-   ========================================================================== */
-.contact {
-    background: var(--aggiemaroon); 
-    color: white;
-    padding: 60px 15% !important; 
-    text-align: center;
-}
-
-.contact h2 { 
-    color: #ffffff;
-    display: inline-block;
-    padding: 5px 20px;
-    margin-bottom: 20px;
-    text-transform: uppercase; 
-}
-
-.contact-info {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-
-.contact-item {
-    color: white;
-    text-decoration: none;
-    font-family: var(--font-code);
-    font-size: 0.95rem;
-    transition: 0.3s;
-}
-
-.contact-item i { color: #ffffff; margin-right: 8px; }
-.contact-item:hover { color: var(--logic-high); }
-
-footer {
-    background: var(--bg-white);
-    color: rgb(0, 0, 0);
-    padding: 25px;
-    text-align: center;
-    font-size: 0.8rem;
-    font-family: var(--font-code);
-}
-
-
-
-/* ==========================================================================
-   7. Certificate
-   ========================================================================== */
-#cert-viewer {
-    padding: 40px 15%  !important; 
-    width: 100%;
-    background: rgba(255, 255, 255, 0.4);
-    display: block;
-    overflow: hidden;
-}
-
-
-.slider-container.media-slider-look {
-    position: relative;
-    width: 100%;
-    max-width: 700px;
-    margin: 20px auto 0 auto; 
-    background: #ffffff;
-    border-radius: 20px;
-    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.356);
-    overflow: hidden;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    display: flex;
-    flex-direction: column;
-}
-
-.cert-slide {
-    display: block; 
-    width: 100%;
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), 
-                transform 0.8s cubic-bezier(0.4, 0, 0.2, 1),
-                visibility 0.8s;
-    transform: translateX(20px);
-    pointer-events: none;
-}
-
-.cert-slide.active {
-    position: relative;
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(0);
-    pointer-events: auto;
-}
-
-.cert-image {
-    width: 100%;
-    height: auto;
-    display: block;
-    aspect-ratio: 17 / 12;
-    object-fit: contain;
-    background-color: #f8f9fa;
-}
-
-.cert-details {
-    padding: 15px;
-    background: #fff;
-    border-top: 1px solid #fff;
-    text-align: center;
-}
-
-.slider-arrow {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 45px;
-    height: 45px;
-    background-color: rgba(0, 43, 91, 0.6);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.3s all ease;
-    z-index: 10;
-}
-
-.slider-arrow:hover {
-    background-color: var(--logic-high);
-    scale: 1.1;
-}
-
-.slider-arrow.prev { left: 20px; }
-.slider-arrow.next { right: 20px; }
-
-@keyframes smoothSlideIn {
-    from {
-        opacity: 0;
-        transform: translateX(15px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-
-/* ==========================================================================
-   7. Course
-   ========================================================================== */
-.course-list {
-    margin-top: 20px;
-    font-family: var(--font-main);
-}
-
-/* Primary List (Semesters) */
-.course-list > ul {
-    list-style-type: none; /* Remove default bullets for semesters */
-    padding-left: 0;
-}
-
-.course-list > ul > li {
-    margin-bottom: 20px;
-    color: var(--navy);
-    font-weight: 600;
-}
-
-/* Nested List (Specific Courses) */
-.course-list ul ul {
-    margin-top: 8px;
-    padding-left: 30px; /* This creates the indentation */
-    list-style-type: square; /* Professional square bullets */
-}
-
-.course-list ul ul li {
-    margin-bottom: 5px;
-    color: var(--slate);
-    font-weight: 400;
-    font-family: var(--font-main);
-    font-size: 0.95rem;
-}
-
+    <div class="contact-info">
+        <a href="mailto:munolibhushan@gmail.com" class="contact-item">
+            <i class="fas fa-envelope"></i> munolibhushan@gmail.com
+        </a>
+        <a href="tel:+1(979)-344-6100" class="contact-item">
+            <i class="fas fa-phone"></i> +1(979)-344-6100
+        </a>
+        <a href="https://www.linkedin.com/in/bhushan-kiran-munoli/" target="_blank" class="contact-item">
+            <i class="fab fa-linkedin"></i> Bhushan Kiran Munoli
+        </a>
+        <a href="https://github.com/yourusername" target="_blank" class="contact-item">
+            <i class="fab fa-github"></i> GitHub
+        </a>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; Bhushan Kiran Munoli | Built with Code & Logic</p>
+</footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
