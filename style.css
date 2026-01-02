@@ -122,6 +122,13 @@ h4 {
     letter-spacing: 1px;
 }
 
+h5 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--aggiemaroon);
+    letter-spacing: 1px;
+}
+
 /* ==========================================================================
    3. LAYOUT & SECTIONS
    ========================================================================== */
@@ -310,7 +317,7 @@ nav ul li a:hover::after {
     width: 30px;
     height: 30px;
     object-fit: fill;
-    transition: transform 0.3s ease;
+    transition: transform 0.1s ease;
 }
 
 .profile-img-large:hover {
