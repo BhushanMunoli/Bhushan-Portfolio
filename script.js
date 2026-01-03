@@ -51,3 +51,16 @@ function toggleDetails(button) {
         button.innerText = 'View More';
     }
 }
+
+
+function toggleDetails_w(button) {
+    const card = button.closest('.work-card');
+    card.classList.toggle('expanded');
+    
+    // Change button text based on state
+    if (card.classList.contains('expanded')) {
+        button.innerText = 'View Less';
+    } else {
+        button.innerText = 'View More';
+    }
+}
