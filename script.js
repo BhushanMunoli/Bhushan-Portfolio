@@ -12,12 +12,12 @@ var typed = new Typed('#typing-text', {
 
 var typed_about = new Typed('#typing-text-about', {
     strings: [
-        'ASIC PHYSICAL DESIGN',
-        'SOC DESIGN AND VERIFICATION', 
-        'DESIGN FOR TEST', 
-        'GPU &amp; CPU ARCHITECTURE',
+        'INTERESTED ROLES - ASIC PHYSICAL DESIGN',
+        'INTERESTED ROLES - SOC DESIGN VERIFICATION', 
+        'INTERESTED ROLES - DESIGN FOR TEST', 
+        'INTERESTED ROLES - GPU &amp; CPU ARCHITECTURE',
     ],
-    typeSpeed: 60,
+    typeSpeed: 40,
     backSpeed: 40,
     loop: true,
     cursorChar: '▮' 
