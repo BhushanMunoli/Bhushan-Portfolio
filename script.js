@@ -10,19 +10,6 @@ var typed = new Typed('#typing-text', {
     cursorChar: '▮' 
 });
 
-var typed_about = new Typed('#typing-text-about', {
-    strings: [
-        'INTERESTED ROLES - ASIC PHYSICAL DESIGN',
-        'INTERESTED ROLES - SOC DESIGN VERIFICATION', 
-        'INTERESTED ROLES - DESIGN FOR TEST', 
-        'INTERESTED ROLES - GPU &amp; CPU ARCHITECTURE',
-    ],
-    typeSpeed: 40,
-    backSpeed: 40,
-    loop: true,
-    cursorChar: '▮' 
-});
-
 // --- PDF Slider Logic ---
 let current = 0;
 
@@ -63,4 +50,5 @@ function toggleDetails_w(button) {
     } else {
         button.innerText = 'View More';
     }
+
 }
