@@ -5,7 +5,7 @@
     --aggiemaroon: #500000;         
     --slate: #2b3a4a;        /* Casual secondary blue-gray */
     --logic-high: #ff9f1c;   /* Amber LED / Logic High accent */
-    --bg-white: #fdfdfd;     Clean off-white
+    --bg-white: #fdfdfd;   
     --font-code: 'IBM Plex Mono', monospace;
 }
 
@@ -746,4 +746,5 @@ footer {
     font-family: var(--font-main);
     font-size: 0.95rem;
 }
+
 
