@@ -465,7 +465,7 @@ img {
 
 /* Expanded state triggered by JavaScript */
 .work-card.expanded .work-details {
-    max-height: 1000px;
+    max-height: 2000px;
     /* Increased to fit content */
     opacity: 1;
     margin-top: 15px;
