@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,10 +10,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <script src="https://kit.fontawesome.com/script.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <nav>
         <div class="logo">Profile</div>
-        <ul>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-list">
             <li><a href="#home">Home</a></li>
             <li><a href="#edu">Education</a></li>
             <li><a href="#workex">Experience</a></li>
@@ -25,441 +30,514 @@
     </nav>
 
     <section id="home" class="hero">
-    <div class="hero-container">
-        <div class="hero-left">
-            <h1>Hey! I'm <span class="name">Bhushan</span></h1>
-            <h3><span id="typing-text"></span></h3>
+        <div class="hero-container">
+            <div class="hero-left">
+                <h1>Hey! I'm <span class="name">Bhushan</span></h1>
+                <h3><span id="typing-text"></span></h3>
                 <div class="hero-description">
-                    <p>Currently pursuing my degree in <b>Electrical and Computer Engineering</b> at <b>Texas A&M University</b>, I am deeply interested in the intersection of <b>SoC Design Verification</b>, <b>ASIC Design</b> and <b>Design for Test</b>. Pursuing masters at Texas A&M University has been an exciting journey and full of learning. Applying these concepts in the projects have made me highly relevant in the practical world. I am eager to contribute my skills and experience to the cutting edge projects in the field of ASIC Design and Verification. I believe my technical knowledge and leadership abilities will enable me to make a significant impact in the industry</p>
-                </br>
+                    <p>Currently pursuing my degree in <b>Electrical and Computer Engineering</b> at <b>Texas A&M
+                            University</b>, I am deeply interested in the intersection of <b>SoC Design
+                            Verification</b>, <b>ASIC Design</b> and <b>Design for Test</b>. Pursuing masters at Texas
+                        A&M University has been an exciting journey and full of learning. Applying these concepts in the
+                        projects have made me highly relevant in the practical world. I am eager to contribute my skills
+                        and experience to the cutting edge projects in the field of ASIC Design and Verification. I
+                        believe my technical knowledge and leadership abilities will enable me to make a significant
+                        impact in the industry</p>
+                    </br>
                     <h4><strong>INTERESTED IN THE FOLLOWING ROLES</strong></h4>
                     <ul>
-                    <li>ASIC Physical Design</li>
-                    <li>SoC Design Verification</li>
-                    <li>GPU & CPU Architecture - Firmware Engineering</li>
-                    <li>Physical Design Testing</li> 
-                </ul>
+                        <li>ASIC Physical Design</li>
+                        <li>SoC Design Verification</li>
+                        <li>GPU & CPU Architecture - Firmware Engineering</li>
+                        <li>Physical Design Testing</li>
+                    </ul>
                 </div>
-            <a href="Bhushan Kiran Munoli TAMU Resume.pdf" class="btn" download>VIEW RESUME</a>
-        </div>
+                <a href="Bhushan Kiran Munoli TAMU Resume.pdf" class="btn" download>VIEW RESUME</a>
+            </div>
 
-        <div class="hero-right">
-            <img src="bhushan_pic.png" alt="Bhushan Kiran Munoli" class="profile-img">
-            <div class="hero-contact-socials">
-            <a href="mailto:munolibhushan@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-            <a href="https://www.linkedin.com/in/bhushan-kiran-munoli/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/BhushanMunoli" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-            <a href="tel:+19793446100" title="Phone"><i class="fas fa-phone"></i></a>
+            <div class="hero-right">
+                <img src="bhushan_pic.png" alt="Bhushan Kiran Munoli" class="profile-img">
+                <div class="hero-contact-socials">
+                    <a href="mailto:munolibhushan@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/bhushan-kiran-munoli/" target="_blank" title="LinkedIn"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/BhushanMunoli" target="_blank" title="GitHub"><i
+                            class="fab fa-github"></i></a>
+                    <a href="tel:+19793446100" title="Phone"><i class="fas fa-phone"></i></a>
+                </div>
+            </div>
         </div>
-        </div>
-    </div>
-</section>
- 
+    </section>
 
-<section id="edu" class="edu">
-    <h2>Education</h2>
-    <div class="work-container">
-        <div class="work-card">
-            <h3><a href="#projects" class="project-link"><img src="tamu.png" alt="work" class="profile-img-large"></a></i> <a href="#projects" class="project-link">Texas A&M University</a></h3>
-            <div class="course-list">
-                <h4>MS in Electrical and Computer Engineering</h4>
-                <h4>August 2025 - May 2027</h4>
-                <ul>
-                     <li><strong>Fall 2025</strong>
+
+    <section id="edu" class="edu">
+        <h2>Education</h2>
+        <div class="work-container">
+            <div class="work-card">
+                <h3><a href="#projects" class="project-link"><img src="tamu.png" alt="work"
+                            class="profile-img-large"></a></i> <a href="#projects" class="project-link">Texas A&M
+                        University</a></h3>
+                <div class="course-list">
+                    <h4>MS in Electrical and Computer Engineering</h4>
+                    <h4>August 2025 - May 2027</h4>
                     <ul>
-                        <li>CSCE 614: Computer Architecture</li>
-                        <li>CSCE 616: Introduction to Hardware Design Verification</li>
-                        <li>ECEN 714: Digital Integrated Circuit Design</li>
+                        <li><strong>Fall 2025</strong>
+                            <ul>
+                                <li>CSCE 614: Computer Architecture</li>
+                                <li>CSCE 616: Introduction to Hardware Design Verification</li>
+                                <li>ECEN 714: Digital Integrated Circuit Design</li>
+                            </ul>
+                        </li>
+                        <li><strong>Spring 2026</strong>
+                            <ul>
+                                <li>CSCE 714: Advanced Hardware Design Functional Verification</li>
+                                <li>ECEN 676: Advanced Computer Architecture</li>
+                                <li>ECEN 749: Microprocessor Systems Design</li>
+                            </ul>
+                        </li>
                     </ul>
-                    </li>
-                    <li><strong>Spring 2026</strong>
-                    <ul>  
-                        <li>CSCE 714: Advanced Hardware Design Functional Verification</li>
-                        <li>ECEN 676: Advanced Computer Architecture</li>
-                        <li>ECEN 749: Microprocessor Systems Design</li>
-                    </ul>
-                    </li>
-                </ul>
+                </div>
+                <button class="view-more-btn" onclick="toggleEducationDetails(this)">View More</button>
             </div>
-        </div>
 
-        <div class="work-card">
-            <h3><a href="#ugprojects" class="project-link"><img src="pes.png" alt="work" class="profile-img-large"></a></i> <a href="#ugprojects" class="project-link">PES University</a></h3>
-            <div class="course-list">
-                <h4>B.Tech in Electronics and Computer Engineering </h4>
-                <h4>August 2019 - May 2023</h4>
-                <ul>
-                     <li><strong>Relevant Courses</strong>
+            <div class="work-card">
+                <h3><a href="#ugprojects" class="project-link"><img src="pes.png" alt="work"
+                            class="profile-img-large"></a></i> <a href="#ugprojects" class="project-link">PES
+                        University</a></h3>
+                <div class="course-list">
+                    <h4>B.Tech in Electronics and Computer Engineering </h4>
+                    <h4>August 2019 - May 2023</h4>
                     <ul>
-                        <li>Computer Organization and Digital Design</li>
-                        <li>Digital VLSI Design</li>
-                        <li>Digital Design using Verilog: ASIC and FPGA Cadence Tool</li>
-                        <li>Verification of Digital Systems</li>
-                        <li>Analog Circuit Design</li>
-                        <li>Control Systems</li>
-                        <li>Machine Learning</li>
-                        <li>Artificial Neural Networks</li>
+                        <li><strong>Relevant Courses</strong>
+                            <ul>
+                                <li>Computer Organization and Digital Design</li>
+                                <li>Digital VLSI Design</li>
+                                <li>Digital Design using Verilog: ASIC and FPGA Cadence Tool</li>
+                                <li>Verification of Digital Systems</li>
+                                <li>Analog Circuit Design</li>
+                                <li>Control Systems</li>
+                                <li>Machine Learning</li>
+                                <li>Artificial Neural Networks</li>
+                            </ul>
+                        </li>
                     </ul>
-                    </li>
-                </ul>
-                <a href="btechdc.pdf" class="btnedu" download>View Degree Certificate</a>
-                <a href="btecht.pdf" class="btnedu" download>View Transcript</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-<section id="workex" class="workex">
-    <h2>Work Experience</h2>
-    <div class="work-container">
-        <div class="work-card">
-            <h3><img src="work.png" alt="work" class="profile-img-large"></i> Maven Silicon</h3>
-            <h4><strong>ASIC Physical Design Engineer</strong></h4>
-            <h4>Mar 2025 - Dec 2025 (India - Remote)</h4>
-            <div class="work-details">
-            <div class="work-category">
-            <ul>
-            <li>Trained on <strong>Advanced Physical Design and Verification</strong>. The course covered fundamental concepts of Physical Design (RTL to GDSII), including <strong> floor planning, STA, Place and Route, CTS, Timing Closure and Physical Verification</strong>. Hands-on lab and real-world projects provided practical experience in implementing VLSI Design.</li>
-            <li>Performed Netlist to GDSII design flow of RISC V for a <strong>32nm design</strong> with 6.34k standard cell count, and 9 metal layers using various tools (of synopsys), constraint files (from synopsys), along with analysis of tradeoffs between area, power and time.</li>
-            <li>Starting with synthesis, followed by DFT, equivalence check, then Physical design which includes floor planning, placement, clock tree synthesis(CTS), Global and Detailed Routing, post optimization and finally sign-off.</li>
-            <li>Achieved standard cell and <strong>core area reduction by 11.8% and total power reduction by 70% with 5ns clock</strong>, avoiding congestion and latency issues and slack being met for setup and hold analysis.</li>
-            </ul>
-            </div>
-            </div>
-            <button class="view-more-btn" onclick="toggleDetails_w(this)">View More</button>
-        </div>
-
-        <div class="work-card">
-            <h3><img src="work.png" alt="work" class="profile-img-large"></i> Deloitte India</h3>
-            <h4><strong>SAP SuccessFactors Consultant & CPI Developer</strong></h4>
-            <h4>Jul 2023 - Jul 2025 (India - Onsite)</h4>
-            <div class="work-details">
-            <div class="work-category">
-            <li><strong>SAP SuccessFactors Consultant SAP Cloud Platform Integration (CPI): </strong> </li>
-            <ul>
-            <li>Created integration suites from scratch to send messages from Happay, S/4HANA, LinkedIn, IIM Jobs, Secure, Docusign, Adobe Acrobat etc. to SAP SuccessFactors.</li>
-            <li>Built test scripts and iFlows for custom and standard integrations using Groovy Script and Java Script.</li>
-            <li>Performed Odata API integrations and SFTP based integration with SAP BASIS and SAP SF solutions.</li> 
-            <li>Conducted client workshops and pre-sales workshops to boost sales and build customer relations</li>
-            </ul>
-            <li><strong> SAP SuccessFactors Recruitment Management: </strong></li>
-            <ul>
-            <li> Collaborated with various clients to conduct client workshops and successfully implemented the Recruitment Management and Recruitment Marketing modules of SAP SuccessFactors according to the customer needs.</li>
-            <li> Being a part of the project management team, I have handled more than 5 different SAP Modules at the same time and have resolve over 500 support tickets for all the modules combined, consistently meeting service level agreements (SLAs) and deadlines.</li>
-            <li> Integrated the RCM module to various modules like Performance and Goal Management, S/4 HANA for seamless data transfer.</li>
-            </ul>
-            <li><strong>SAP SuccessFactors Onboarding 2.0: </strong></li>
-            <ul>
-            <li> Implementation of the ONB2.0 system from scratch for clients in India, USA, UAE, and Bangladesh seamlessly connecting the system to the DBMS- S/4 HANA and Employee Central.</li>
-            <li> Conducted client workshops to analyze the new developments in technology and how the business can utilize it to improve their day to day functions. This required me to utilize various contacts at SAP to analyze the developments.</li>
-            <li> Integrated the RCM module to various modules like Performance and Goal Management, S/4 HANA for seamless data transfer.</li>
-            </ul>
-            </div>
-            </div>
-
-            <button class="view-more-btn" onclick="toggleDetails_w(this)">View More</button>
-            <a href="del.PDF" class="btnedu" download>Experience Letter</a>
-        </div>
-
-        <div class="work-card">
-            <h3><img src="work.png" alt="work" class="profile-img-large"></i> Zebra Technologies</h3>
-            <h4><strong>Network Engineer (Intern)</strong></h4>
-            <h4>Jan 2023 - July 2023 (India - Onsite)</h4>
-            <div class="work-details">
-            <div class="work-category">
-            <ul>
-            <li> Worked on test automation scripts, creating them from scratch solving bugs in the existing ones mainly using Robot Framework and python.</li>
-            <li> The testing was conducted on WLAN devices to check for WIFI and Bluetooth connectivity.</li>
-            <li> Developed system apps for WLAN devices to verify Wi-Fi and Bluetooth connectivity using Java and Python and concepts of Bluetooth Low energy and time synchronization improving device testing</li>
-            <li> Collaborated with cross-functional teams to reduced the system time difference between the devices to 2 milliseconds by sending a modified NTP packet from the host server and test 4+ devices simultaneously</li>
-            </div>
-            </div>
-            <button class="view-more-btn" onclick="toggleDetails_w(this)">View More</button>
-            <a href="zeb.pdf" class="btnedu" download>Internship Completion Certificate</a>
-        </div>
-    </div>
-</section>
-
-
-<section id="projects" class="projects">
-    <h2>Computer Architecture Projects, Texas A&M University</h2>
-    <div class="project-container">
-
-        <div class="project-card">
-            <h3>Implementation of Cache Replacement and Insertion Policies Across L3 Cache Sizes</h3>
-            <h4>Nov 2025 - Dec 2025 <a href="https://github.com/BhushanMunoli/Implementation-of-Cache-Replacement-and-Insertion-Policies-Across-L3-Cache-Sizes" class="project-link"><i class="fab fa-github"></i></a></h4>
-            <div class="project-details">
-            <p> Implemented and Analyzed SRRIP, iTP, xPTP, iTP-xPTP, CPSD and L-Hybrid Cache Replacement and Cahce Insertion policies for 1mb, 2mb 4mb and 8mb cache sizes in ZSIM simulator. Executed various benchmarks to test the policies' performance for single thread, multi-thread, integer and floating point instructions.</p>
-            </div>
-             <button class="view-more-btn" onclick="toggleDetails(this)">View More</button>
-        </div>
-        
-        <div class="project-card">
-            <h3>Branch Predictor Implementation</h3>
-            <h4>Sept 2025 - Oct 2025 <a href="https://github.com/BhushanMunoli/Branch-Pradictor-Implementation/tree/main" class="project-link"><i class="fab fa-github"></i></a></h4>
-            <div class="project-details">
-            <p>Implemented Adaptive Branch Predictors with the reference of the research "Alternative Implementations of Two-Level Adaptive Branch Prediction". Simulated the models on ZSIM simulator and obtained 97% branch prediction accuracy.</p>
-            </div>
-             <button class="view-more-btn" onclick="toggleDetails(this)">View More</button>
-        </div>
-    </div>
-</section>
-
-<section id="hwprojects" class="projects">
-    <h2>Hardware Design Verification Projects, Texas A&M University</h2>
-    <div class="project-container">
-
-        <div class="project-card">
-            <h3>Functional Verification of Hyper Transport Advanced X-Bar</h3>
-            <h4>Aug 2025 - Dec 2025 <a href="https://github.com/BhushanMunoli/Functional-Verification-of-Hyper-Transport-Advanced-X-Bar" class="project-link"><i class="fab fa-github"></i></a></h4>
-            <div class="project-details">
-            <p>Created a verification plan using vManager to review and track the functional specifications of HTAX. Set up the verification environment by developing and integrating UVM test-bench components including assertions, cover points, drivers, and monitors. Ran random sequence regression and performed root cause analysis to achieve 100% coverage.</p>
-            </div>
-             <button class="view-more-btn" onclick="toggleDetails(this)">View More</button>
-        </div>
-
-        <div class="project-card">
-            <h3>Router 1x3 Implementation</h3>
-            <h4>Mar 2025 - Jul 2025 <a href="#" class="project-link"><i class="fab fa-github"></i></a></h4>
-            <div class="project-details">
-            <p>Used Verilog, System Verilog, and UVM along with Synopsys VCS and Xilinx Vivado to build a UVM-based test-bench with sequence items, driver, monitor, and scoreboard. Executed regression testing with randomized sequences and debugged failures to reach full functional coverage.</p>
-            </div>
-             <button class="view-more-btn" onclick="toggleDetails(this)">View More</button>
-        </div>
-
-</section>
-        
-<section id="pdprojects" class="projects">
-    <h2>ASIC Digital Design Projects, Texas A&M University</h2>
-    <div class="project-container">
-
-        <div class="project-card">
-            <h3>Implementation of Random Double Bit and Burst ECC for HBM3</h3>
-            <h4>Aug 2025 - Inprogress <a href="#" class="project-link"><i class="fab fa-github"></i></a></h4>
-            <div class="project-details">
-            <p>Created a MATLAB script to analyze and validate the results and algorithms from the research paper. Designed an RTL-level error correction code using Verilog and tested the implementation on an FPGA board. Built the design on 180nm technology with a decoder that achieved 21.27% less area compared to the Unit-ECC approach.</p>
-            </div>
-             <button class="view-more-btn" onclick="toggleDetails(this)">View More</button>
-        </div>
-
-        <div class="project-card">
-            <h3>Design of Pipelined Adder with Buffered H-clock Tree</h3>
-            <h4>Aug 2025 - Dec 2025 <a href="#" class="project-link"><i class="fab fa-github"></i></a></h4>
-            <div class="project-details">
-            <p>Worked on designing and analyzing schematics and layouts for NAND, XOR, and NOT logic gates, along with flip-flop and SRAM circuits. Developed transistor-level schematics and layouts for an 8-bit pipelined adder with a buffered H-clock tree. Used the logical effort method to optimize transistor sizing, which resulted in a 33% reduction in delay.</p>
-            </div>
-             <button class="view-more-btn" onclick="toggleDetails(this)">View More</button>
-        </div>
-        
-
-        <div class="project-card">
-            <h3>Logic Synthesis & STA of Cruise Control System</h3>
-            <h4>Oct 2025 - Nov 2025 <a href="#" class="project-link"><i class="fab fa-github"></i></a></h4>
-            <div class="project-details">
-            <p>Built a 5-state Verilog-based cruise control FSM with 20 D flip-flops, implementing acceleration and braking control logic, and synthesized it using Cadence Genus. Identified the top 3 critical setup and hold paths through static timing analysis and achieved signoff-level closure with zero timing violations.</p>
-            </div>
-             <button class="view-more-btn" onclick="toggleDetails(this)">View More</button>
-        </div>
-
-        <div class="project-card">
-            <h3>RISC-V Implementation</h3>
-             <h4>Mar 2025 - Oct 2025 <a href="#" class="project-link"><i class="fab fa-github"></i></a></h4>
-    
-            <div class="project-details">
-            <p>Built a 32-bit microprocessor (RISC-V core) from RTL to GDSII using 32nm technology modules to operate reliably at a clock period of 7ns, with a T-shaped floor plan and 29,338.9 µm² total cell area. Performed full clock tree synthesis to optimize clock distribution and minimize skew. Analyzed power distribution with a detailed breakdown of static and dynamic power contributions.</p>
-            </div>
-
-             <button class="view-more-btn" onclick="toggleDetails(this)">View More</button>
-        </div>
-
-        <div class="project-card">
-            <h3>Router 1x3 Implementation</h3>
-            <h4>Mar 2025 - Jul 2025 <a href="#" class="project-link"><i class="fab fa-github"></i></a></h4>
-            <div class="project-details">
-            <p>Built a 1x3 router using 32nm technology with an L-shaped floor plan and 333MHz clock frequency. Performed full clock tree synthesis and ran DRC checks to correct violations in the router design.</p>
-            </div>
-             <button class="view-more-btn" onclick="toggleDetails(this)">View More</button>
-        </div>
-
-        
-
-    </div>
-</section>
-
-<section id="ugprojects" class="projects">
-    <h2>Undergraduate Projects at PES University, India</h2>
-    <div class="project-container">
-        <div class="project-card">
-            <h3>Implementation of IoT-Based Healthcare Kit</h3>
-            <h4>Jan 2022 - May 2023 <a href="https://github.com/BhushanMunoli/IoT-Based-Healthcare-Kit" class="project-link"><i class="fab fa-github"></i></a></h4>
-            <a href="finalprojpes.pdf" class="btnedu" download>View Research Paper</a>
-        </div>
-        
-        <div class="project-card">
-            <h3>Human Voice Analysis to Determine Age and Gender</h3>
-            <h4>Aug 2023 - Dec 2023 <a href="https://github.com/BhushanMunoli/Human-Voice-Analysis/tree/main" class="project-link"><i class="fab fa-github"></i></a></h4>
-            <a href="audioproj.pdf" class="btnedu" download>View Research Paper</a>
-        </div>
-
-    </div>
-</section>
-
-
-<section id="cert-viewer">
-    <div class="container">
-        <h2 class="section-title">Professional Cadence Certifications</h2>
-        
-        <div class="slider-container media-slider-look">
-            <div class="cert-slide active">
-                <div class="slide-content">
-                    <div class="cert-details">
-                        <h3>System Verilog for Design and Verification v25.03</h3>
-                    </div>
-                    <img src="SVDV.png" alt="System Verilog for Design and Verification" class="cert-image">
+                    <a href="btechdc.pdf" class="btnedu" download>View Degree Certificate</a>
+                    <a href="btecht.pdf" class="btnedu" download>View Transcript</a>
                 </div>
+                <button class="view-more-btn" onclick="toggleEducationDetails(this)">View More</button>
             </div>
-
-            <div class="cert-slide">
-                <div class="slide-content">
-                    <div class="cert-details">
-                        <h3>System Verilog Assertions v5.2</h3>
-                    </div>
-                    <img src="SVA.png" alt="System Verilog Assertions" class="cert-image">
-                </div>
-            </div>
-
-            <div class="cert-slide">
-                <div class="slide-content">
-                    <div class="cert-details">
-                        <h3>Jasper Formal Fundamentals v25.09</h3>
-                    </div>
-                    <img src="jaspformal.png" alt="Jasper Formal Fundamentals" class="cert-image">
-                </div>
-            </div>
-
-            <div class="cert-slide">
-                <div class="slide-content">
-                    <div class="cert-details">
-                        <h3>Basic Static Timing Analysis v3.0</h3>
-                    </div>
-                    <img src="bsta.png" alt="Basic Static Timing Analysis" class="cert-image">
-                </div>
-            </div>
-
-            <button class="slider-arrow prev" onclick="moveSlide(-1)">&#10094;</button>
-            <button class="slider-arrow next" onclick="moveSlide(1)">&#10095;</button>
         </div>
-    </div>
-</section>
+    </section>
 
 
 
-<section id="skills" class="skills">
-    <div class="container">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h5><i class="fas fa-tools"></i> SoC Design Verification</h5>
-                <ul>
-                    <li>UVM</li>
-                    <li>System Verilog & Verilog</li>
-                    <li> Protocols</li>
-                    <ul>
-                        <li>Advanced Microcontroller Bus Architecture(AMBA)</li>
-                        <li>Hyper Transport Advanced X-Bar (HTAX)</li>
-                        <li>Universal Serial Bus (USB)</li>
-                        <li>Inter-Integrated Circuit (I2C)</li>
-                        <li>Universal Asynchronous Receiver/Transmitter (UART)</li>
-                    </ul>
-                    <li>GPU & CPU Architecture</li>
-                    <li>Softwares</li>
-                    <ul>    
-                        <li>Cadence vManager</li>
-                        <li>Xcelium</li>
-                        <li>SimVision</li>
-                        <li>IMC</li>
-                    </ul>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <h5><i class="fas fa-microchip"></i> ASIC Physical Design</h5>
-                <ul>
-                    <li>Floor-Planning</li>
-                    <li>Placement & Routing</li>
-                    <li>Static Timings Analysis</li>
-                    <li>Clock Tree Analysis</li>
-                    <li>Power Analysis</li>
-                    <li>TCL Scripting</li>
-                    <li>Perl</li>
-                    <li>Softwares</li>
-                    <ul>    
-                        <li>Cadence</li> 
+    <section id="workex" class="workex">
+        <h2>Work Experience</h2>
+        <div class="work-container">
+            <div class="work-card">
+                <h3><img src="work.png" alt="work" class="profile-img-large"></i> Maven Silicon</h3>
+                <h4><strong>ASIC Physical Design Engineer</strong></h4>
+                <h4>Mar 2025 - Dec 2025 (India - Remote)</h4>
+                <div class="work-details">
+                    <div class="work-category">
                         <ul>
-                            <li>Virtuoso</li>
-                            <li>Spectre</li>
-                        </ul>    
-                        <li>Synopsys </li>
+                            <li>Trained on <strong>Advanced Physical Design and Verification</strong>. The course
+                                covered fundamental concepts of Physical Design (RTL to GDSII), including <strong> floor
+                                    planning, STA, Place and Route, CTS, Timing Closure and Physical
+                                    Verification</strong>. Hands-on lab and real-world projects provided practical
+                                experience in implementing VLSI Design.</li>
+                            <li>Performed Netlist to GDSII design flow of RISC V for a <strong>32nm design</strong> with
+                                6.34k standard cell count, and 9 metal layers using various tools (of synopsys),
+                                constraint files (from synopsys), along with analysis of tradeoffs between area, power
+                                and time.</li>
+                            <li>Starting with synthesis, followed by DFT, equivalence check, then Physical design which
+                                includes floor planning, placement, clock tree synthesis(CTS), Global and Detailed
+                                Routing, post optimization and finally sign-off.</li>
+                            <li>Achieved standard cell and <strong>core area reduction by 11.8% and total power
+                                    reduction by 70% with 5ns clock</strong>, avoiding congestion and latency issues and
+                                slack being met for setup and hold analysis.</li>
+                        </ul>
+                    </div>
+                </div>
+                <button class="view-more-btn" onclick="toggleSectionDetails(this)">View More</button>
+            </div>
+
+            <div class="work-card">
+                <h3><img src="work.png" alt="work" class="profile-img-large"></i> Deloitte India</h3>
+                <h4><strong>SAP SuccessFactors Consultant & CPI Developer</strong></h4>
+                <h4>Jul 2023 - Jul 2025 (India - Onsite)</h4>
+                <div class="work-details">
+                    <div class="work-category">
+                        <li><strong>SAP SuccessFactors Consultant SAP Cloud Platform Integration (CPI): </strong> </li>
                         <ul>
-                        <li>Design Compiler</li>
-                        <li>Fusion Compiler</li>
-                        <li>IC Compiler</li>
-                        <li>Prime Time</li>
+                            <li>Created integration suites from scratch to send messages from Happay, S/4HANA, LinkedIn,
+                                IIM Jobs, Secure, Docusign, Adobe Acrobat etc. to SAP SuccessFactors.</li>
+                            <li>Built test scripts and iFlows for custom and standard integrations using Groovy Script
+                                and Java Script.</li>
+                            <li>Performed Odata API integrations and SFTP based integration with SAP BASIS and SAP SF
+                                solutions.</li>
+                            <li>Conducted client workshops and pre-sales workshops to boost sales and build customer
+                                relations</li>
+                        </ul>
+                        <li><strong> SAP SuccessFactors Recruitment Management: </strong></li>
+                        <ul>
+                            <li> Collaborated with various clients to conduct client workshops and successfully
+                                implemented the Recruitment Management and Recruitment Marketing modules of SAP
+                                SuccessFactors according to the customer needs.</li>
+                            <li> Being a part of the project management team, I have handled more than 5 different SAP
+                                Modules at the same time and have resolve over 500 support tickets for all the modules
+                                combined, consistently meeting service level agreements (SLAs) and deadlines.</li>
+                            <li> Integrated the RCM module to various modules like Performance and Goal Management, S/4
+                                HANA for seamless data transfer.</li>
+                        </ul>
+                        <li><strong>SAP SuccessFactors Onboarding 2.0: </strong></li>
+                        <ul>
+                            <li> Implementation of the ONB2.0 system from scratch for clients in India, USA, UAE, and
+                                Bangladesh seamlessly connecting the system to the DBMS- S/4 HANA and Employee Central.
+                            </li>
+                            <li> Conducted client workshops to analyze the new developments in technology and how the
+                                business can utilize it to improve their day to day functions. This required me to
+                                utilize various contacts at SAP to analyze the developments.</li>
+                            <li> Integrated the RCM module to various modules like Performance and Goal Management, S/4
+                                HANA for seamless data transfer.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <button class="view-more-btn" onclick="toggleSectionDetails(this)">View More</button>
+                <a href="del.PDF" class="btnedu" download>Experience Letter</a>
+            </div>
+
+            <div class="work-card">
+                <h3><img src="work.png" alt="work" class="profile-img-large"></i> Zebra Technologies</h3>
+                <h4><strong>Network Engineer (Intern)</strong></h4>
+                <h4>Jan 2023 - July 2023 (India - Onsite)</h4>
+                <div class="work-details">
+                    <div class="work-category">
+                        <ul>
+                            <li> Worked on test automation scripts, creating them from scratch solving bugs in the
+                                existing ones mainly using Robot Framework and python.</li>
+                            <li> The testing was conducted on WLAN devices to check for WIFI and Bluetooth connectivity.
+                            </li>
+                            <li> Developed system apps for WLAN devices to verify Wi-Fi and Bluetooth connectivity using
+                                Java and Python and concepts of Bluetooth Low energy and time synchronization improving
+                                device testing</li>
+                            <li> Collaborated with cross-functional teams to reduced the system time difference between
+                                the devices to 2 milliseconds by sending a modified NTP packet from the host server and
+                                test 4+ devices simultaneously</li>
+                    </div>
+                </div>
+                <button class="view-more-btn" onclick="toggleSectionDetails(this)">View More</button>
+                <a href="zeb.pdf" class="btnedu" download>Internship Completion Certificate</a>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="projects" class="projects">
+        <h2>Computer Architecture Projects, Texas A&M University</h2>
+        <div class="project-container">
+
+            <div class="project-card">
+                <h3>Implementation of Cache Replacement and Insertion Policies Across L3 Cache Sizes</h3>
+                <h4>Nov 2025 - Dec 2025 <a
+                        href="https://github.com/BhushanMunoli/Implementation-of-Cache-Replacement-and-Insertion-Policies-Across-L3-Cache-Sizes"
+                        class="project-link"><i class="fab fa-github"></i></a></h4>
+                <div class="project-details">
+                    <p> Implemented and Analyzed SRRIP, iTP, xPTP, iTP-xPTP, CPSD and L-Hybrid Cache Replacement and
+                        Cahce Insertion policies for 1mb, 2mb 4mb and 8mb cache sizes in ZSIM simulator. Executed
+                        various benchmarks to test the policies' performance for single thread, multi-thread, integer
+                        and floating point instructions.</p>
+                </div>
+                <button class="view-more-btn" onclick="toggleSectionDetails(this)">View More</button>
+            </div>
+
+            <div class="project-card">
+                <h3>Branch Predictor Implementation</h3>
+                <h4>Sept 2025 - Oct 2025 <a
+                        href="https://github.com/BhushanMunoli/Branch-Pradictor-Implementation/tree/main"
+                        class="project-link"><i class="fab fa-github"></i></a></h4>
+                <div class="project-details">
+                    <p>Implemented Adaptive Branch Predictors with the reference of the research "Alternative
+                        Implementations of Two-Level Adaptive Branch Prediction". Simulated the models on ZSIM simulator
+                        and obtained 97% branch prediction accuracy.</p>
+                </div>
+                <button class="view-more-btn" onclick="toggleSectionDetails(this)">View More</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="hwprojects" class="projects">
+        <h2>Hardware Design Verification Projects, Texas A&M University</h2>
+        <div class="project-container">
+
+            <div class="project-card">
+                <h3>Functional Verification of Hyper Transport Advanced X-Bar</h3>
+                <h4>Aug 2025 - Dec 2025 <a
+                        href="https://github.com/BhushanMunoli/Functional-Verification-of-Hyper-Transport-Advanced-X-Bar"
+                        class="project-link"><i class="fab fa-github"></i></a></h4>
+                <div class="project-details">
+                    <p>Created a verification plan using vManager to review and track the functional specifications of
+                        HTAX. Set up the verification environment by developing and integrating UVM test-bench
+                        components including assertions, cover points, drivers, and monitors. Ran random sequence
+                        regression and performed root cause analysis to achieve 100% coverage.</p>
+                </div>
+                <button class="view-more-btn" onclick="toggleSectionDetails(this)">View More</button>
+            </div>
+
+            <div class="project-card">
+                <h3>Router 1x3 Implementation</h3>
+                <h4>Mar 2025 - Jul 2025 <a href="#" class="project-link"><i class="fab fa-github"></i></a></h4>
+                <div class="project-details">
+                    <p>Used Verilog, System Verilog, and UVM along with Synopsys VCS and Xilinx Vivado to build a
+                        UVM-based test-bench with sequence items, driver, monitor, and scoreboard. Executed regression
+                        testing with randomized sequences and debugged failures to reach full functional coverage.</p>
+                </div>
+                <button class="view-more-btn" onclick="toggleSectionDetails(this)">View More</button>
+            </div>
+
+    </section>
+
+    <section id="pdprojects" class="projects">
+        <h2>ASIC Digital Design Projects, Texas A&M University</h2>
+        <div class="project-container">
+
+            <div class="project-card">
+                <h3>Implementation of Random Double Bit and Burst ECC for HBM3</h3>
+                <h4>Aug 2025 - Inprogress <a href="#" class="project-link"><i class="fab fa-github"></i></a></h4>
+                <div class="project-details">
+                    <p>Created a MATLAB script to analyze and validate the results and algorithms from the research
+                        paper. Designed an RTL-level error correction code using Verilog and tested the implementation
+                        on an FPGA board. Built the design on 180nm technology with a decoder that achieved 21.27% less
+                        area compared to the Unit-ECC approach.</p>
+                </div>
+                <button class="view-more-btn" onclick="toggleSectionDetails(this)">View More</button>
+            </div>
+
+            <div class="project-card">
+                <h3>Design of Pipelined Adder with Buffered H-clock Tree</h3>
+                <h4>Aug 2025 - Dec 2025 <a href="#" class="project-link"><i class="fab fa-github"></i></a></h4>
+                <div class="project-details">
+                    <p>Worked on designing and analyzing schematics and layouts for NAND, XOR, and NOT logic gates,
+                        along with flip-flop and SRAM circuits. Developed transistor-level schematics and layouts for an
+                        8-bit pipelined adder with a buffered H-clock tree. Used the logical effort method to optimize
+                        transistor sizing, which resulted in a 33% reduction in delay.</p>
+                </div>
+                <button class="view-more-btn" onclick="toggleSectionDetails(this)">View More</button>
+            </div>
+
+
+            <div class="project-card">
+                <h3>Logic Synthesis & STA of Cruise Control System</h3>
+                <h4>Oct 2025 - Nov 2025 <a href="#" class="project-link"><i class="fab fa-github"></i></a></h4>
+                <div class="project-details">
+                    <p>Built a 5-state Verilog-based cruise control FSM with 20 D flip-flops, implementing acceleration
+                        and braking control logic, and synthesized it using Cadence Genus. Identified the top 3 critical
+                        setup and hold paths through static timing analysis and achieved signoff-level closure with zero
+                        timing violations.</p>
+                </div>
+                <button class="view-more-btn" onclick="toggleSectionDetails(this)">View More</button>
+            </div>
+
+            <div class="project-card">
+                <h3>RISC-V Implementation</h3>
+                <h4>Mar 2025 - Oct 2025 <a href="#" class="project-link"><i class="fab fa-github"></i></a></h4>
+
+                <div class="project-details">
+                    <p>Built a 32-bit microprocessor (RISC-V core) from RTL to GDSII using 32nm technology modules to
+                        operate reliably at a clock period of 7ns, with a T-shaped floor plan and 29,338.9 µm² total
+                        cell area. Performed full clock tree synthesis to optimize clock distribution and minimize skew.
+                        Analyzed power distribution with a detailed breakdown of static and dynamic power contributions.
+                    </p>
+                </div>
+
+                <button class="view-more-btn" onclick="toggleSectionDetails(this)">View More</button>
+            </div>
+
+            <div class="project-card">
+                <h3>Router 1x3 Implementation</h3>
+                <h4>Mar 2025 - Jul 2025 <a href="#" class="project-link"><i class="fab fa-github"></i></a></h4>
+                <div class="project-details">
+                    <p>Built a 1x3 router using 32nm technology with an L-shaped floor plan and 333MHz clock frequency.
+                        Performed full clock tree synthesis and ran DRC checks to correct violations in the router
+                        design.</p>
+                </div>
+                <button class="view-more-btn" onclick="toggleSectionDetails(this)">View More</button>
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <section id="ugprojects" class="projects">
+        <h2>Undergraduate Projects at PES University, India</h2>
+        <div class="project-container">
+            <div class="project-card">
+                <h3>Implementation of IoT-Based Healthcare Kit</h3>
+                <h4>Jan 2022 - May 2023 <a href="https://github.com/BhushanMunoli/IoT-Based-Healthcare-Kit"
+                        class="project-link"><i class="fab fa-github"></i></a></h4>
+                <a href="finalprojpes.pdf" class="btnedu" download>View Research Paper</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Human Voice Analysis to Determine Age and Gender</h3>
+                <h4>Aug 2023 - Dec 2023 <a href="https://github.com/BhushanMunoli/Human-Voice-Analysis/tree/main"
+                        class="project-link"><i class="fab fa-github"></i></a></h4>
+                <a href="audioproj.pdf" class="btnedu" download>View Research Paper</a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="cert-viewer">
+        <div class="container">
+            <h2 class="section-title">Professional Cadence Certifications</h2>
+
+            <div class="slider-container media-slider-look">
+                <div class="cert-slide active">
+                    <div class="slide-content">
+                        <div class="cert-details">
+                            <h3>System Verilog for Design and Verification v25.03</h3>
+                        </div>
+                        <img src="SVDV.png" alt="System Verilog for Design and Verification" class="cert-image">
+                    </div>
+                </div>
+
+                <div class="cert-slide">
+                    <div class="slide-content">
+                        <div class="cert-details">
+                            <h3>System Verilog Assertions v5.2</h3>
+                        </div>
+                        <img src="SVA.png" alt="System Verilog Assertions" class="cert-image">
+                    </div>
+                </div>
+
+                <div class="cert-slide">
+                    <div class="slide-content">
+                        <div class="cert-details">
+                            <h3>Jasper Formal Fundamentals v25.09</h3>
+                        </div>
+                        <img src="jaspformal.png" alt="Jasper Formal Fundamentals" class="cert-image">
+                    </div>
+                </div>
+
+                <div class="cert-slide">
+                    <div class="slide-content">
+                        <div class="cert-details">
+                            <h3>Basic Static Timing Analysis v3.0</h3>
+                        </div>
+                        <img src="bsta.png" alt="Basic Static Timing Analysis" class="cert-image">
+                    </div>
+                </div>
+
+                <button class="slider-arrow prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="slider-arrow next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h5><i class="fas fa-tools"></i> SoC Design Verification</h5>
+                    <ul>
+                        <li>UVM</li>
+                        <li>System Verilog & Verilog</li>
+                        <li> Protocols</li>
+                        <ul>
+                            <li>Advanced Microcontroller Bus Architecture(AMBA)</li>
+                            <li>Hyper Transport Advanced X-Bar (HTAX)</li>
+                            <li>Universal Serial Bus (USB)</li>
+                            <li>Inter-Integrated Circuit (I2C)</li>
+                            <li>Universal Asynchronous Receiver/Transmitter (UART)</li>
+                        </ul>
+                        <li>GPU & CPU Architecture</li>
+                        <li>Softwares</li>
+                        <ul>
+                            <li>Cadence vManager</li>
+                            <li>Xcelium</li>
+                            <li>SimVision</li>
+                            <li>IMC</li>
                         </ul>
                     </ul>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <h5><i class="fas fa-laptop-code"></i> Programming</h5>
-                <ul>
-                    <li>C </li>
-                    <li>C++</li>
-                    <li>Verilog</li>
-                    <li>System Verilog</li>
-                    <li>Python</li>
-                    <li>Make file</li>
-                    <li>Linux Shell</li>
-                    <li>Git</li>
-                </ul>
+                </div>
+                <div class="skill-category">
+                    <h5><i class="fas fa-microchip"></i> ASIC Physical Design</h5>
+                    <ul>
+                        <li>Floor-Planning</li>
+                        <li>Placement & Routing</li>
+                        <li>Static Timings Analysis</li>
+                        <li>Clock Tree Analysis</li>
+                        <li>Power Analysis</li>
+                        <li>TCL Scripting</li>
+                        <li>Perl</li>
+                        <li>Softwares</li>
+                        <ul>
+                            <li>Cadence</li>
+                            <ul>
+                                <li>Virtuoso</li>
+                                <li>Spectre</li>
+                            </ul>
+                            <li>Synopsys </li>
+                            <ul>
+                                <li>Design Compiler</li>
+                                <li>Fusion Compiler</li>
+                                <li>IC Compiler</li>
+                                <li>Prime Time</li>
+                            </ul>
+                        </ul>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h5><i class="fas fa-laptop-code"></i> Programming</h5>
+                    <ul>
+                        <li>C </li>
+                        <li>C++</li>
+                        <li>Verilog</li>
+                        <li>System Verilog</li>
+                        <li>Python</li>
+                        <li>Make file</li>
+                        <li>Linux Shell</li>
+                        <li>Git</li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
-<section id="contact" class="contact">
-    <h2>Contact</h2>
-    <p>Currently in College Station, Texas, United States of America.</p>
-    
-    <div class="contact-info">
-        <a href="mailto:munolibhushan@gmail.com" class="contact-item">
-            <i class="fas fa-envelope"></i> munolibhushan@gmail.com
-        </a>
-        <a href="tel:+1(979)-344-6100" class="contact-item">
-            <i class="fas fa-phone"></i> +1(979)-344-6100
-        </a>
-        <a href="https://www.linkedin.com/in/bhushan-kiran-munoli/" target="_blank" class="contact-item">
-            <i class="fab fa-linkedin"></i> Bhushan Kiran Munoli
-        </a>
-        <a href="https://github.com/BhushanMunoli" target="_blank" class="contact-item">
-            <i class="fab fa-github"></i> GitHub
-        </a>
-    </div>
-</section>
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <p>Currently in College Station, Texas, United States of America.</p>
 
-<footer>
-    <p>&copy; Bhushan Kiran Munoli | Built with Code & Logic</p>
-</footer>
+        <div class="contact-info">
+            <a href="mailto:munolibhushan@gmail.com" class="contact-item">
+                <i class="fas fa-envelope"></i> munolibhushan@gmail.com
+            </a>
+            <a href="tel:+1(979)-344-6100" class="contact-item">
+                <i class="fas fa-phone"></i> +1(979)-344-6100
+            </a>
+            <a href="https://www.linkedin.com/in/bhushan-kiran-munoli/" target="_blank" class="contact-item">
+                <i class="fab fa-linkedin"></i> Bhushan Kiran Munoli
+            </a>
+            <a href="https://github.com/BhushanMunoli" target="_blank" class="contact-item">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; Bhushan Kiran Munoli | Built with Code & Logic</p>
+    </footer>
 
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="script.js"></script>
 </body>
 
 </html>
-
-
-
-
-
-
