@@ -242,7 +242,7 @@ section {
     font-family: var(--font-code);
     color: var(--aggiemaroon);
     background: #002b5b11;
-    padding: 2px 10px;
+    padding: 2px 8px;
     border-radius: 4px;
 }
 
@@ -250,7 +250,7 @@ section {
     font-family: var(--font-code);
     color: var(--aggiemaroon);
     background: #002b5b11;
-    padding: 0px 10px;
+    padding: 0px 8px;
     border-radius: 4px;
 }
 
@@ -393,10 +393,15 @@ img {
 }
 
 .work-container {
-    display: outside;
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
     margin-top: 20px;
+}
+
+.workex .work-container {
+    display: flex;
+    flex-direction: column;
 }
 
 .work-card {
@@ -465,7 +470,7 @@ img {
 
 /* Expanded state triggered by JavaScript */
 .work-card.expanded .work-details {
-    max-height: 1225px;
+    max-height: 2000px;
     /* Increased to fit content */
     opacity: 1;
     margin-top: 15px;
@@ -850,27 +855,47 @@ footer {
         background: rgba(80, 0, 0, 0.98);
         backdrop-filter: blur(15px);
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
+        /* Stretch items to full width */
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: max-height 0.4s ease-in-out;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+        padding: 0;
+        /* Reset padding */
     }
 
     .nav-list.active {
         max-height: 100vh;
-        padding-bottom: 30px;
+        padding: 10px 0;
+    }
+
+    .nav-list li {
+        margin: 0 !important;
+        /* Force reset desktop margin */
+        width: 100%;
     }
 
     .nav-list li a {
         display: block;
-        padding: 15px 0;
-        font-size: 1.2rem;
-        color: rgba(255, 255, 255, 0.9);
+        padding: 18px 0;
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.95);
         border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         width: 100%;
         text-align: center;
+        transition: background 0.3s ease;
+    }
+
+    .nav-list li:last-child a {
+        border-bottom: none;
+    }
+
+    .nav-list li a:hover {
+        background: rgba(255, 255, 255, 0.1);
+        color: var(--logic-high) !important;
     }
 
     .hero-description {
@@ -894,35 +919,57 @@ footer {
     /* --- CREATIVE MOBILE CARDS REDESIGN --- */
 
     /* Horizontal Scrolling Container */
-    /* Horizontal Scrolling Container for Projects & Skills */
+    /* Horizontal Scrolling Container for Projects & Skills & Education */
+    .edu .work-container,
     .project-container,
     .skills-grid {
         display: flex;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
-        gap: 15px;
-        padding: 10px 5% 30px 5%;
-        margin: 0 -5%;
+        gap: 20px;
+        padding: 20px 0 40px 0;
+        margin: 0;
         -webkit-overflow-scrolling: touch;
+        scroll-padding-inline: 12.5vw;
     }
 
-    /* Vertical Stack for Work Experience */
-    .work-container {
+    /* More visible scrollbar */
+    .edu .work-container::-webkit-scrollbar,
+    .project-container::-webkit-scrollbar,
+    .skills-grid::-webkit-scrollbar {
+        display: block;
+        height: 6px;
+    }
+
+    .edu .work-container::-webkit-scrollbar-thumb,
+    .project-container::-webkit-scrollbar-thumb,
+    .skills-grid::-webkit-scrollbar-thumb {
+        background: var(--logic-high);
+        border-radius: 10px;
+        border: 2px solid #fff;
+        /* Inset look */
+    }
+
+    /* Vertical Stack ONLY for Work Experience */
+    .workex .work-container {
         display: flex;
         flex-direction: column;
         gap: 20px;
         margin: 0;
         padding: 0;
         overflow: visible;
+        mask-image: none;
+        -webkit-mask-image: none;
     }
 
-    /* Card Base Style */
-    /* Card Base Style for Horizontal Items */
+    /* Card Base Style for Horizontal Items (Peek Effect) */
+    .edu .work-card,
     .project-card,
     .skill-category {
-        min-width: 88vw;
+        min-width: 75vw;
+        /* Smaller cards = bigger 'peek' */
         scroll-snap-align: center;
-        scroll-margin: 20px;
+        scroll-margin: 0;
         display: flex;
         flex-direction: column;
         justify-content: flex-start !important;
@@ -931,14 +978,21 @@ footer {
         background: #ffffff;
         border-radius: 16px;
         border: 1px solid #f0f0f0;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06) !important;
-        margin-top: 0;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08) !important;
+        margin-top: 5px;
         height: auto;
         position: relative;
+        transition: transform 0.3s ease;
     }
 
-    /* Card Base Style for Vertical Work Items */
-    .work-card {
+    .project-card:active,
+    .skill-category:active {
+        transform: scale(0.98);
+        /* Subtle feedback on tap */
+    }
+
+    /* Card Base Style for Vertical Work Items (Experience Section) */
+    .workex .work-card {
         min-width: 100%;
         /* Full width */
         display: flex;
@@ -1006,7 +1060,9 @@ footer {
     }
 
     /* Button Styling */
-    .view-more-btn {
+    .view-more-btn,
+    .edu .view-more-btn {
+        /* Ensure education button is visible too */
         margin-top: auto !important;
         /* Pushes button to bottom if card has height */
         width: 100%;
@@ -1059,250 +1115,4 @@ footer {
     margin: 0;
     line-height: 1.3;
     max-height: 100%;
-}
-
-@media (max-width: 768px) {
-    nav {
-        padding: 0.8rem 5%;
-    }
-
-    .menu-toggle {
-        display: block;
-        margin-right: 10px;
-        color: white;
-        font-size: 1.5rem;
-        cursor: pointer;
-        transition: transform 0.3s ease;
-    }
-
-    .menu-toggle:hover {
-        transform: scale(1.1);
-        color: var(--logic-high);
-    }
-
-    .nav-list {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: rgba(80, 0, 0, 0.95);
-        backdrop-filter: blur(10px);
-        flex-direction: column;
-        align-items: center;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    }
-
-    .nav-list.active {
-        max-height: 100vh;
-        padding-bottom: 20px;
-    }
-
-    .nav-list li {
-        margin: 0;
-        width: 100%;
-        text-align: center;
-        opacity: 0;
-        transform: translateY(-10px);
-        transition: opacity 0.3s ease, transform 0.3s ease;
-    }
-
-    .nav-list.active li {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    /* Staggered animation delay for list items */
-    .nav-list.active li:nth-child(1) {
-        transition-delay: 0.1s;
-    }
-
-    .nav-list.active li:nth-child(2) {
-        transition-delay: 0.15s;
-    }
-
-    .nav-list.active li:nth-child(3) {
-        transition-delay: 0.2s;
-    }
-
-    .nav-list.active li:nth-child(4) {
-        transition-delay: 0.25s;
-    }
-
-    .nav-list.active li:nth-child(5) {
-        transition-delay: 0.3s;
-    }
-
-    .nav-list.active li:nth-child(6) {
-        transition-delay: 0.35s;
-    }
-
-    .nav-list.active li:nth-child(7) {
-        transition-delay: 0.4s;
-    }
-
-    .nav-list.active li:nth-child(8) {
-        transition-delay: 0.45s;
-    }
-
-    .nav-list li a {
-        display: block;
-        padding: 15px 0;
-        font-size: 1.1rem;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        transition: background 0.3s ease, color 0.3s ease;
-    }
-
-    .nav-list li a:hover {
-        background: rgba(255, 255, 255, 0.1);
-        color: var(--logic-high);
-        padding-left: 10px;
-    }
-
-    .hero-description {
-        text-align: left !important;
-        padding: 15px !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        font-size: 1rem !important;
-        line-height: 1.5;
-    }
-
-    /* Fix for typing text overflow */
-    .hero h3 {
-        font-size: 1.1rem;
-        /* Smaller font to fit better */
-        min-height: 3.5rem;
-        /* Reserve space for 2 lines to prevent jumping */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 15px;
-    }
-
-    /* Fit Projects and Skills with horizontal scroll */
-    .project-container,
-    .skills-grid,
-    .work-container {
-        display: flex;
-        /* Turn grid into flex row */
-        overflow-x: auto;
-        /* Enable horizontal scrolling */
-        scroll-snap-type: x mandatory;
-        /* Snap behavior */
-        gap: 15px;
-        padding-bottom: 20px;
-        /* Space for scrollbar */
-        margin: 0 -5%;
-        /* Negative margin to pull to edges */
-        padding-left: 5%;
-        /* Restore padding for first item */
-        padding-right: 5%;
-        -webkit-overflow-scrolling: touch;
-        /* Smooth scroll on iOS */
-    }
-
-    .project-card,
-    .skill-category,
-    .work-card {
-        min-width: 90vw;
-        /* Increase width to occupy full screen */
-        margin-right: 15px;
-        /* Add spacing between cards */
-        scroll-snap-align: center;
-        margin-top: 0;
-    }
-
-    /* Compact Education Section */
-    .edu .work-card .course-list ul {
-        display: none;
-        /* Hide course details by default */
-    }
-
-    .edu .work-card .course-list h4 {
-        margin-bottom: 5px;
-    }
-
-    .edu .work-card .view-more-btn {
-        display: block;
-        /* Show the button on mobile */
-        margin: 15px auto 0 auto;
-        /* Center it */
-    }
-
-    /* Active state for education card expansion */
-    .edu .work-card.expanded .course-list ul {
-        display: block;
-        animation: smoothSlideIn 0.3s ease;
-    }
-
-    .project-card,
-    .skill-category,
-    .work-card {
-        scroll-snap-align: center;
-        scroll-margin: 20px;
-        padding: 20px !important;
-        /* Reduce padding on mobile */
-    }
-
-    /* Tighter typography inside cards for mobile */
-    .work-card h3,
-    .project-card h3,
-    .skill-category h5 {
-        font-size: 1.25rem;
-        margin-bottom: 5px;
-    }
-
-    .work-card h4,
-    .project-card h4 {
-        font-size: 0.95rem;
-        margin-bottom: 5px;
-    }
-
-    .work-card ul,
-    .project-card ul,
-    .skill-category ul {
-        padding-left: 15px;
-        /* Less indentation */
-    }
-
-    .work-card li,
-    .project-card li,
-    .skill-category li {
-        font-size: 0.95rem;
-        margin-bottom: 3px;
-        /* Tighter list items */
-    }
-
-    /* Disable hover effects on mobile */
-    .work-card:hover,
-    .project-card:hover,
-    .skill-category:hover {
-        transform: none;
-        box-shadow: none;
-        border-color: rgba(0, 43, 91, 0.1);
-        /* keeps default border or logic-high if preferred, but usually reset to default */
-    }
-
-    /* Better mobile typography for section headers */
-    h2 {
-        font-size: 1.8rem;
-        word-wrap: break-word;
-        /* Ensure long words don't overflow */
-        line-height: 1.3;
-    }
-
-    section {
-        padding: 40px 5% !important;
-    }
-
-    /* Hide scrollbar for cleaner look */
-    .project-container::-webkit-scrollbar,
-    .skills-grid::-webkit-scrollbar,
-    .work-container::-webkit-scrollbar {
-        display: none;
-    }
 }
