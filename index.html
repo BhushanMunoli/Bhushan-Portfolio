@@ -141,21 +141,9 @@
                 <div class="work-details">
                     <div class="work-category">
                         <ul>
-                            <li>Trained on <strong>Advanced Physical Design and Verification</strong>. The course
-                                covered fundamental concepts of Physical Design (RTL to GDSII), including <strong> floor
-                                    planning, STA, Place and Route, CTS, Timing Closure and Physical
-                                    Verification</strong>. Hands-on lab and real-world projects provided practical
-                                experience in implementing VLSI Design.</li>
-                            <li>Performed Netlist to GDSII design flow of RISC V for a <strong>32nm design</strong> with
-                                6.34k standard cell count, and 9 metal layers using various tools (of synopsys),
-                                constraint files (from synopsys), along with analysis of tradeoffs between area, power
-                                and time.</li>
-                            <li>Starting with synthesis, followed by DFT, equivalence check, then Physical design which
-                                includes floor planning, placement, clock tree synthesis(CTS), Global and Detailed
-                                Routing, post optimization and finally sign-off.</li>
-                            <li>Achieved standard cell and <strong>core area reduction by 11.8% and total power
-                                    reduction by 70% with 5ns clock</strong>, avoiding congestion and latency issues and
-                                slack being met for setup and hold analysis.</li>
+                            <li>Built Net-list to GDS II design flow of RISC-V for a 32nm design with constraint files, along with analysis of area, power & time tradeoff. Performed placement, routing for macros and standard cells along with Concurrent Clock and Data Optimization and Integrated Clock Gating</li>
+                            <li>Performed Static Timing Analysis and Clock Tree Synthesis to manage timing delays for a 5ns clock. Analyzed timing reports for input and output delay constraints. Worked on Clock domain Crossing to manage clocks of different frequencies.</li>
+                            <li>Achieved standard cell and core area reduction to 29338.9μm2 and total power reduction, minimizing congestion and meeting setup time and hold time requirements</li>
                         </ul>
                     </div>
                 </div>
@@ -306,10 +294,7 @@
                 <h3>Implementation of Random Double Bit and Burst ECC for HBM3</h3>
                 <h4>Aug 2025 - Inprogress <a href="#" class="project-link"><i class="fab fa-github"></i></a></h4>
                 <div class="project-details">
-                    <p>Created a MATLAB script to analyze and validate the results and algorithms from the research
-                        paper. Designed an RTL-level error correction code using Verilog and tested the implementation
-                        on an FPGA board. Built the design on 180nm technology with a decoder that achieved 21.27% less
-                        area compared to the Unit-ECC approach.</p>
+                    <p>Designed RTL level error correction code. Tested the design on a FPGA board. Developed a Matlab script to analyze results. Building a design on 180nm technology to meet the SoC specification with 21.27% reduction in area</p>
                 </div>
                 <button class="view-more-btn" onclick="toggleSectionDetails(this)">View More</button>
             </div>
@@ -344,10 +329,7 @@
                 <h4>Mar 2025 - Oct 2025 <a href="#" class="project-link"><i class="fab fa-github"></i></a></h4>
 
                 <div class="project-details">
-                    <p>Built a 32-bit microprocessor (RISC-V core) from RTL to GDSII using 32nm technology modules to
-                        operate reliably at a clock period of 7ns, with a T-shaped floor plan and 29,338.9 µm² total
-                        cell area. Performed full clock tree synthesis to optimize clock distribution and minimize skew.
-                        Analyzed power distribution with a detailed breakdown of static and dynamic power contributions.
+                    <p>Built a 32-bit microprocessor (RISC-V core) from RTL to GDSII using 32nm technology. Performed full Clock Tree Synthesis, to optimize clock distribution and minimize skew. Performed Macro, Standard cell placement & congestion analysis. Completed placement and post route optimization. Optimized the design to operate reliably at a clock period of 5ns with an area of 29338.9μm2
                     </p>
                 </div>
 
@@ -358,9 +340,7 @@
                 <h3>Router 1x3 Implementation</h3>
                 <h4>Mar 2025 - Jul 2025 <a href="#" class="project-link"><i class="fab fa-github"></i></a></h4>
                 <div class="project-details">
-                    <p>Built a 1x3 router using 32nm technology with an L-shaped floor plan and 333MHz clock frequency.
-                        Performed full clock tree synthesis and ran DRC checks to correct violations in the router
-                        design.</p>
+                    <p>Designed a Router 1x3 using 32nm technology with L Shaped floor-planning and 333MHz clock frequency. Performed full Clock Tree Synthesis and initialized DRC check to correct violations in the router design</p>
                 </div>
                 <button class="view-more-btn" onclick="toggleSectionDetails(this)">View More</button>
             </div>
@@ -541,4 +521,5 @@
 </body>
 
 </html>
+
 
